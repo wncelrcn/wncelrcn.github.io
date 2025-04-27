@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Image from "next/image";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = styled(Paper)(({ theme }) => ({
   borderRadius: "16px",
@@ -89,60 +90,88 @@ export default function ProjectBox({
   imageSrc = null,
   imageAlt = "",
   projectUrl = "#",
+  description = "Lorem ipsum...",
   techStack = [
     { name: "ML", color: "#FF6B6B" },
     { name: "React", color: "#4DB4D7" },
     { name: "AWS", color: "#FF9F1C" },
   ],
+  additionalImages = [],
+  paperUrl = null,
+  figmaUrl = null,
 }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const handleArrowClick = (e) => {
-    e.stopPropagation(); // Prevent event bubbling
-    if (projectUrl !== "#") {
-      window.open(projectUrl, "_blank");
-    }
+    e.stopPropagation();
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  const projectData = {
+    title,
+    imageSrc,
+    imageAlt,
+    description,
+    projectUrl,
+    techStack,
+    additionalImages,
+    paperUrl,
+    figmaUrl,
   };
 
   return (
-    <ProjectCard elevation={0}>
-      <ImageContainer>
-        {imageSrc ? (
-          <Image
-            src={imageSrc}
-            alt={imageAlt || title}
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        ) : (
-          <Box
-            sx={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#999",
-              fontSize: "4rem",
-            }}
-          >
-            🖼️
+    <>
+      <ProjectCard elevation={0}>
+        <ImageContainer>
+          {imageSrc ? (
+            <Image
+              src={imageSrc}
+              alt={imageAlt || title}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          ) : (
+            <Box
+              sx={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#999",
+                fontSize: "4rem",
+              }}
+            >
+              🖼️
+            </Box>
+          )}
+        </ImageContainer>
+        <ContentWrapper>
+          <ProjectTitle>{title}</ProjectTitle>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <TechStack>
+              {techStack.map((tech, index) => (
+                <TechTag key={index} color={tech.color}>
+                  {tech.name}
+                </TechTag>
+              ))}
+            </TechStack>
+            <ArrowButton onClick={handleArrowClick}>
+              <ArrowOutwardIcon />
+            </ArrowButton>
           </Box>
-        )}
-      </ImageContainer>
-      <ContentWrapper>
-        <ProjectTitle>{title}</ProjectTitle>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-          <TechStack>
-            {techStack.map((tech, index) => (
-              <TechTag key={index} color={tech.color}>
-                {tech.name}
-              </TechTag>
-            ))}
-          </TechStack>
-          <ArrowButton onClick={handleArrowClick}>
-            <ArrowOutwardIcon />
-          </ArrowButton>
-        </Box>
-      </ContentWrapper>
-    </ProjectCard>
+        </ContentWrapper>
+      </ProjectCard>
+
+      <ProjectModal
+        open={modalOpen}
+        onClose={handleCloseModal}
+        project={projectData}
+      />
+    </>
   );
 }
