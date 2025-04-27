@@ -65,7 +65,7 @@ const TitleText = styled(Typography)(({ theme }) => ({
 const HalfCircle = styled(Box)(({ theme }) => ({
   position: "relative",
   width: "100%",
-  height: "600px",
+  height: "650px",
   marginTop: "4rem",
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {
@@ -272,7 +272,7 @@ export default function Home() {
             bottom: 0,
             left: "50%",
             transform: "translateX(-50%)",
-            width: { xs: "350px", sm: "550px", md: "650px" },
+            width: { xs: "350px", sm: "550px", md: "750px" },
             height: "auto",
             zIndex: 1,
             display: "flex",
@@ -360,6 +360,18 @@ export default function Home() {
         >
           {/* Left Column - About Me */}
           <Box sx={{ flex: 1 }}>
+            <Box
+              component="img"
+              src="./about-me.png"
+              alt="About Me"
+              sx={{
+                width: "70%",
+                maxWidth: "300px",
+                height: "auto",
+                mb: 3,
+                borderRadius: "8px",
+              }}
+            />
             <Typography
               variant="h6"
               sx={{
@@ -368,6 +380,7 @@ export default function Home() {
                 fontWeight: "500",
                 color: "#aaa",
                 mb: 2,
+                mt: 4,
               }}
             >
               A LITTLE ABOUT ME
@@ -402,12 +415,16 @@ export default function Home() {
                 lineHeight: 1.8,
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              vel nunc ac urna elementum malesuada. Praesent condimentum vel
-              turpis mollis vulputate. Duis nibh lacus, fermentum at posuere id,
-              laoreet in tellus. Aliquam erat volutpat. Maecenas varius, mauris
-              nec auctor consequat, odio nibh lobortis dolor, a aliquam tellus
-              nisl non lacus.
+              With a strong foundation in technology and problem-solving, I am
+              passionate about creating innovative and impactful solutions
+              through continuous learning and collaboration. I actively seek
+              opportunities to challenge myself, whether through academic
+              projects, competitions, or involvement in the tech community. I am
+              committed to professional growth, driven by a mindset of
+              resilience, creativity, and lifelong learning. As I advance in my
+              career, I aim to contribute to meaningful projects, work alongside
+              inspiring individuals, and continue developing skills that create
+              positive change.
             </Typography>
           </Box>
 
@@ -417,46 +434,58 @@ export default function Home() {
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
                 <ValueCard>
-                  <ValueTitle>Value 1</ValueTitle>
+                  <ValueTitle>📒 Be a Lifelong Learner.</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vel nunc ac urna elementum malesuada.
+                    Growth comes from constant curiosity. I actively seek out
+                    new challenges—through competitions, collaborations,
+                    reading, and engaging with the tech community—to both learn
+                    from others and give back by sharing my experiences and
+                    mentoring others.
                   </ValueDescription>
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <ValueCard>
-                  <ValueTitle>Value 2</ValueTitle>
+                  <ValueTitle>🌱 Grow with Purpose.</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vel nunc ac urna elementum malesuada.
+                    I believe that personal and professional growth should be
+                    intentional. Every project, every interaction, and every
+                    challenge is an opportunity to not just improve, but to
+                    align more closely with my values and purpose—and to make a
+                    positive difference.
                   </ValueDescription>
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <ValueCard>
-                  <ValueTitle>Value 3</ValueTitle>
+                  <ValueTitle>💛 Lead with Passion.</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vel nunc ac urna elementum malesuada.
+                    Loving what I do fuels my energy and commitment. It inspires
+                    me to chase limitless creativity and to collaborate with
+                    others who share the same fire, creating meaningful impact
+                    and spreading positivity.
                   </ValueDescription>
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <ValueCard>
-                  <ValueTitle>Value 4</ValueTitle>
+                  <ValueTitle>😊 Stay Human.</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vel nunc ac urna elementum malesuada.
+                    Kindness, empathy, and authenticity matter. I strive to
+                    understand different perspectives, uplift others, and
+                    contribute to an environment of inclusion, respect, and
+                    genuine connection.
                   </ValueDescription>
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
                 <ValueCard>
-                  <ValueTitle>Value 5</ValueTitle>
+                  <ValueTitle>✊ Trust the Process.</ValueTitle>
                   <ValueDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean vel nunc ac urna elementum malesuada.
+                    Success is built through embracing challenges, setbacks, and
+                    moments of discomfort. I believe in staying curious,
+                    optimistic, and resilient, enjoying the ride while trusting
+                    in my own growth.
                   </ValueDescription>
                 </ValueCard>
               </Grid>

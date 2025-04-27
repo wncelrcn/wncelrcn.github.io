@@ -117,7 +117,7 @@ export default function Footer() {
           </FooterSection>
 
           <FooterSection>
-            <CopyrightText>© 2025 WINCE LARCEN</CopyrightText>
+            <CopyrightText>© 2025 WINCE LARCEN RIVANO</CopyrightText>
             <FooterText>All rights reserved.</FooterText>
           </FooterSection>
         </Box>
