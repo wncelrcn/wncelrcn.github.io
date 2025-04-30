@@ -67,7 +67,7 @@ const SkillItem = styled(Typography)(({ theme }) => ({
 
 export default function Skills() {
   return (
-    <Container maxWidth="lg" sx={{ mt: 8 }}>
+    <Container maxWidth="lg" sx={{ mt: 8, mb: 8 }}>
       <Box>
         <SectionTitle>SKILLS AND EXPERTISE</SectionTitle>
         <MainTitle>How I Add Value</MainTitle>
