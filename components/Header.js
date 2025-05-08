@@ -1,7 +1,20 @@
 "use client";
 
-import React from "react";
-import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  useMediaQuery,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -30,10 +43,28 @@ const Logo = styled(Typography)({
   fontFamily: "var(--font-urbanist)",
   fontSize: "1.5rem",
   letterSpacing: "5px",
+  marginLeft: "0.5rem",
+});
+
+const MobileNavItem = styled(ListItem)({
+  padding: "1rem 2rem",
 });
 
 export default function Header() {
   const pathname = usePathname();
+  const isMobile = useMediaQuery("(max-width:768px)");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const navItems = [
+    { path: "/projects", label: "Projects" },
+    { path: "/skills", label: "Skills" },
+    { path: "/experience", label: "Experience" },
+    { path: "/certifications", label: "Certifications" },
+  ];
 
   return (
     <StyledAppBar position="static">
@@ -50,52 +81,91 @@ export default function Header() {
           <Logo variant="h6">WINCE LARCEN</Logo>
         </Link>
 
-        <Box sx={{ display: "flex", gap: "1.5rem" }}>
-          <Link href="/projects" style={{ textDecoration: "none" }}>
-            <NavButton
-              sx={{
-                borderBottom:
-                  pathname === "/projects" ? "2px solid #4DB4D7" : "none",
-                borderRadius: 0,
+        {isMobile ? (
+          <>
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer}
+              sx={{ color: "#000000" }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={toggleDrawer}
+              PaperProps={{
+                sx: {
+                  width: "70%",
+                  maxWidth: "300px",
+                  backgroundColor: "#EDF7F7",
+                  paddingTop: "1rem",
+                },
               }}
             >
-              Projects
-            </NavButton>
-          </Link>
-          <Link href="/skills" style={{ textDecoration: "none" }}>
-            <NavButton
-              sx={{
-                borderBottom:
-                  pathname === "/skills" ? "2px solid #4DB4D7" : "none",
-                borderRadius: 0,
-              }}
-            >
-              Skills
-            </NavButton>
-          </Link>
-          <Link href="/experience" style={{ textDecoration: "none" }}>
-            <NavButton
-              sx={{
-                borderBottom:
-                  pathname === "/experience" ? "2px solid #4DB4D7" : "none",
-                borderRadius: 0,
-              }}
-            >
-              Experience
-            </NavButton>
-          </Link>
-          <Link href="/certifications" style={{ textDecoration: "none" }}>
-            <NavButton
-              sx={{
-                borderBottom:
-                  pathname === "/certifications" ? "2px solid #4DB4D7" : "none",
-                borderRadius: 0,
-              }}
-            >
-              Certifications
-            </NavButton>
-          </Link>
-        </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  padding: "0 1rem 1rem",
+                }}
+              >
+                <Logo variant="h6">MENU</Logo>
+                <IconButton onClick={toggleDrawer}>
+                  <CloseIcon />
+                </IconButton>
+              </Box>
+              <List>
+                {navItems.map((item) => (
+                  <MobileNavItem key={item.path}>
+                    <Link
+                      href={item.path}
+                      style={{ textDecoration: "none", width: "100%" }}
+                      onClick={toggleDrawer}
+                    >
+                      <Typography
+                        sx={{
+                          color: "#000000",
+                          fontWeight: 600,
+                          fontFamily: "var(--font-urbanist)",
+                          borderBottom:
+                            pathname === item.path
+                              ? "2px solid #4DB4D7"
+                              : "none",
+                          display: "inline-block",
+                        }}
+                      >
+                        {item.label}
+                      </Typography>
+                    </Link>
+                  </MobileNavItem>
+                ))}
+              </List>
+            </Drawer>
+          </>
+        ) : (
+          <Box sx={{ display: "flex", gap: "1.5rem" }}>
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                style={{ textDecoration: "none" }}
+              >
+                <NavButton
+                  sx={{
+                    borderBottom:
+                      pathname === item.path ? "2px solid #4DB4D7" : "none",
+                    borderRadius: 0,
+                  }}
+                >
+                  {item.label}
+                </NavButton>
+              </Link>
+            ))}
+          </Box>
+        )}
       </Toolbar>
     </StyledAppBar>
   );

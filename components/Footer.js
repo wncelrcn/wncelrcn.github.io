@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Link as MuiLink,
+  useMediaQuery,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Link from "next/link";
 
@@ -14,18 +20,25 @@ const FooterContainer = styled(Box)({
   borderTopRightRadius: "15px",
 });
 
-const FooterSection = styled(Box)({
-  marginBottom: "20px",
-});
+const FooterSection = styled(Box)(({ theme }) => ({
+  marginBottom: "30px",
+  [theme.breakpoints.down("sm")]: {
+    textAlign: "center",
+    marginBottom: "40px",
+  },
+}));
 
-const FooterHeading = styled(Typography)({
+const FooterHeading = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
   fontWeight: "bold",
-  marginBottom: "10px",
+  marginBottom: "15px",
   display: "flex",
   alignItems: "center",
   fontSize: "1rem",
-});
+  [theme.breakpoints.down("sm")]: {
+    justifyContent: "center",
+  },
+}));
 
 const FooterText = styled(Typography)({
   fontFamily: "var(--font-urbanist)",
@@ -43,12 +56,17 @@ const FooterLink = styled(MuiLink)({
   },
 });
 
-const FooterGreeting = styled(Typography)({
+const FooterGreeting = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
   fontSize: "1.5rem",
   fontWeight: "bold",
   marginBottom: "50px",
-});
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "1.3rem",
+    textAlign: "center",
+    marginBottom: "40px",
+  },
+}));
 
 const CopyrightText = styled(Typography)({
   fontFamily: "var(--font-urbanist)",
@@ -57,9 +75,11 @@ const CopyrightText = styled(Typography)({
 });
 
 export default function Footer() {
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
   return (
     <FooterContainer>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ padding: { xs: "0 20px", md: "0 24px" } }}>
         <FooterGreeting variant="h6">
           Thanks for stopping by, let's chat! 👋
         </FooterGreeting>
@@ -68,9 +88,11 @@ export default function Footer() {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-between",
+            justifyContent: { xs: "center", md: "space-between" },
+            alignItems: { xs: "center", md: "flex-start" },
             borderRadius: "20px 20px 0 0",
             flexDirection: { xs: "column", md: "row" },
+            gap: { xs: "10px", md: "0" },
           }}
         >
           <FooterSection>
@@ -89,7 +111,15 @@ export default function Footer() {
 
           <FooterSection>
             <FooterHeading>LET'S CONNECT 🤝</FooterHeading>
-            <Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                gap: { xs: "10px", sm: "0" },
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <FooterLink
                 href="./resume.pdf"
                 target="_blank"
@@ -97,7 +127,7 @@ export default function Footer() {
               >
                 Resume
               </FooterLink>
-              {" | "}
+              {!isMobile && " | "}
               <FooterLink
                 href="https://linkedin.com/in/wincelarcen"
                 target="_blank"
@@ -105,7 +135,7 @@ export default function Footer() {
               >
                 LinkedIn
               </FooterLink>
-              {" | "}
+              {!isMobile && " | "}
               <FooterLink
                 href="https://github.com/wncelrcn"
                 target="_blank"
@@ -116,7 +146,7 @@ export default function Footer() {
             </Box>
           </FooterSection>
 
-          <FooterSection>
+          <FooterSection sx={{ textAlign: { xs: "center", md: "right" } }}>
             <CopyrightText>© 2025 WINCE LARCEN RIVANO</CopyrightText>
             <FooterText>All rights reserved.</FooterText>
           </FooterSection>
