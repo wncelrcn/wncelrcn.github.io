@@ -155,6 +155,7 @@ const ValueDescription = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
   color: "#666",
   lineHeight: 1.6,
+  fontSize: "1rem",
 }));
 
 export default function Home() {
@@ -402,6 +403,7 @@ export default function Home() {
                 color: "#666",
                 mb: 2,
                 lineHeight: 1.8,
+                fontSize: "1.2rem",
               }}
             >
               I am currently a Third Year BS in Computer Science Student at
@@ -413,6 +415,7 @@ export default function Home() {
                 fontFamily: "var(--font-urbanist)",
                 color: "#666",
                 lineHeight: 1.8,
+                fontSize: "1.2rem",
               }}
             >
               With a strong foundation in technology and problem-solving, I am
