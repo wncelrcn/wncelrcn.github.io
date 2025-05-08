@@ -66,13 +66,13 @@ const HalfCircle = styled(Box)(({ theme }) => ({
   position: "relative",
   width: "100%",
   height: "650px",
-  marginTop: "4rem",
+  marginTop: "8rem",
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {
     height: "500px",
   },
   [theme.breakpoints.down("sm")]: {
-    height: "400px",
+    height: "300px",
   },
   "&::before": {
     content: '""',

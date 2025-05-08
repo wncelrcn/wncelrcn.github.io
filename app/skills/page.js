@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Container, Typography, Box, Grid, Paper } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Grid,
+  List,
+  ListItem,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
@@ -52,18 +59,17 @@ const SkillCategory = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const SkillItem = styled(Typography)(({ theme }) => ({
-  fontFamily: "var(--font-urbanist)",
-  fontSize: "1.25rem",
-  marginBottom: "0.75rem",
-  display: "flex",
-  alignItems: "center",
-  "&:before": {
-    content: '"•"',
-    marginRight: "0.5rem",
-    color: "#000",
+const BulletList = styled(List)({
+  paddingLeft: "1rem",
+  "& li": {
+    display: "list-item",
+    padding: "0.25rem 0",
+    fontFamily: "var(--font-urbanist)",
+    fontSize: "1.25rem",
   },
-}));
+  listStyleType: "disc",
+  marginLeft: "1rem",
+});
 
 export default function Skills() {
   return (
@@ -81,77 +87,85 @@ export default function Skills() {
           <Grid item xs={12}>
             <Box sx={{ mb: 5 }}>
               <SkillCategory>Machine Learning</SkillCategory>
-              <Box sx={{ width: "100%" }}>
-                <SkillItem>
-                  Experienced in implementing supervised and unsupervised
-                  learning algorithms for classification and clustering.
-                </SkillItem>
-                <SkillItem>
-                  Developed a face recognition model, using the face_recognition
-                  library and OpenCV, which uses pre- trained models for face
-                  detection and encoding.
-                </SkillItem>
-                <SkillItem>
-                  Developed multiple object detection models using YOLO v11.
-                </SkillItem>
-                <SkillItem>
-                  Trained a natural language processing (NLP) model for text
-                  analysis and sentiment classification.
-                </SkillItem>
+              <Box sx={{ ml: 1 }}>
+                <BulletList>
+                  <ListItem>
+                    Experienced in implementing supervised and unsupervised
+                    learning algorithms for classification and clustering.
+                  </ListItem>
+                  <ListItem>
+                    Developed a face recognition model, using the
+                    face_recognition library and OpenCV, which uses pre- trained
+                    models for face detection and encoding.
+                  </ListItem>
+                  <ListItem>
+                    Developed multiple object detection models using YOLO v11.
+                  </ListItem>
+                  <ListItem>
+                    Trained a natural language processing (NLP) model for text
+                    analysis and sentiment classification.
+                  </ListItem>
+                </BulletList>
               </Box>
             </Box>
 
             <Box sx={{ mb: 5 }}>
-              <SkillCategory>Front-end Web Development</SkillCategory>
+              <SkillCategory>Front-end Development</SkillCategory>
               <Box sx={{ ml: 1 }}>
-                <SkillItem>
-                  Developed multiple web and mobile projects using front-end
-                  frameworks including React, React Native, Next.js, Vue.js, and
-                  ASP.NET.
-                </SkillItem>
-                <SkillItem>
-                  Skilled in designing user-friendly interfaces for web and
-                  mobile applications using Figma.
-                </SkillItem>
-                <SkillItem>
-                  Proficient in using different styling frameworks such as
-                  TailwindCSS, Material UI, DaisyUI, and Bootstrap.
-                </SkillItem>
-                <SkillItem>
-                  Created dashboards and data visualizations using ChartJs.
-                </SkillItem>
+                <BulletList>
+                  <ListItem>
+                    Developed multiple web and mobile projects using front-end
+                    frameworks including React, React Native, Next.js, Vue.js,
+                    and ASP.NET.
+                  </ListItem>
+                  <ListItem>
+                    Skilled in designing user-friendly interfaces for web and
+                    mobile applications using Figma.
+                  </ListItem>
+                  <ListItem>
+                    Proficient in using different styling frameworks such as
+                    TailwindCSS, Material UI, DaisyUI, and Bootstrap.
+                  </ListItem>
+                  <ListItem>
+                    Created dashboards and data visualizations using ChartJs.
+                  </ListItem>
+                </BulletList>
               </Box>
             </Box>
 
             <Box sx={{ mb: 5 }}>
-              <SkillCategory>Back-end Web Development</SkillCategory>
+              <SkillCategory>Back-end Development</SkillCategory>
               <Box sx={{ ml: 1 }}>
-                <SkillItem>
-                  Created RESTful APIs using Express.js and Flask.
-                </SkillItem>
-                <SkillItem>
-                  Has experience in using and integrating difference Database
-                  Management Systems like MS SQL, MySQL, Firebase, Supabase, and
-                  MongoDB.
-                </SkillItem>
-                <SkillItem>
-                  Knowledgeable in software design and architecture of software
-                  projects.
-                </SkillItem>
+                <BulletList>
+                  <ListItem>
+                    Created RESTful APIs using Express.js and Flask.
+                  </ListItem>
+                  <ListItem>
+                    Has experience in using and integrating difference Database
+                    Management Systems like MS SQL, MySQL, Firebase, Supabase,
+                    and MongoDB.
+                  </ListItem>
+                  <ListItem>
+                    Knowledgeable in software design and architecture of
+                    software projects.
+                  </ListItem>
+                </BulletList>
               </Box>
             </Box>
 
             <Box sx={{ mb: 5 }}>
               <SkillCategory>Project Management</SkillCategory>
               <Box sx={{ ml: 1 }}>
-                <SkillItem>
-                  Spearheaded different teams through the planning, analysis,
-                  design, and implementation of various software projects.
-                </SkillItem>
-                <SkillItem>
-                  Used project management tools such as Trello, Jira, and GitHub
-                  for managing project deliverables
-                </SkillItem>
+                <BulletList>
+                  <ListItem>
+                    Spearheaded different teams through the planning, analysis,
+                    design, and implementation of various software projects.
+                  </ListItem>
+                  <ListItem>
+                    Used project management tools such as Trello, Jira, and
+                    GitHub for managing project deliverables
+                  </ListItem>
+                </BulletList>
               </Box>
             </Box>
           </Grid>

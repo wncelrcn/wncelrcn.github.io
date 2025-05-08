@@ -127,7 +127,7 @@ export default function Footer() {
               >
                 Resume
               </FooterLink>
-              {!isMobile && " | "}
+              {!isMobile && "     "}
               <FooterLink
                 href="https://linkedin.com/in/wincelarcen"
                 target="_blank"
@@ -135,7 +135,7 @@ export default function Footer() {
               >
                 LinkedIn
               </FooterLink>
-              {!isMobile && " | "}
+              {!isMobile && "     "}
               <FooterLink
                 href="https://github.com/wncelrcn"
                 target="_blank"

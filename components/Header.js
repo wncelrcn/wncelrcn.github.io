@@ -88,7 +88,7 @@ export default function Header() {
               color="inherit"
               aria-label="menu"
               onClick={toggleDrawer}
-              sx={{ color: "#000000" }}
+              sx={{ color: "#000000", mr: "0.3rem" }}
             >
               <MenuIcon />
             </IconButton>
