@@ -99,6 +99,9 @@ export default function ProjectBox({
   additionalImages = [],
   paperUrl = null,
   figmaUrl = null,
+  websiteUrl = null,
+  presentationUrl = null,
+  figmaUrls = null,
 }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -121,6 +124,9 @@ export default function ProjectBox({
     additionalImages,
     paperUrl,
     figmaUrl,
+    websiteUrl,
+    presentationUrl,
+    figmaUrls,
   };
 
   return (

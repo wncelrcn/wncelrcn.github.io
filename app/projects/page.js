@@ -67,19 +67,20 @@ const ProjectRow = styled(Box)({
 export default function Projects() {
   const row1Projects = [
     {
-      title: "AI Image Generator",
-      imageSrc: "/projects/ai-image-generator.png",
-      imageAlt: "AI Image Generator Project",
-      projectUrl: "https://github.com/yourusername/ai-image-generator",
+      title: "Colorectal Cancer Prediction",
+      imageSrc: "/banners/colorectal.png",
+      imageAlt: "Colorectal Cancer ML Project",
+      projectUrl: "https://github.com/wncelrcn/Colorectal-Cancer-Prediction",
       paperUrl: "#",
       figmaUrl: "#",
       presentationUrl: "#",
+      websiteUrl: "#",
       description:
-        "A deep learning-based image generation tool that uses GANs to create realistic images from text descriptions. Built with TensorFlow and deployed on a React-based UI, this project demonstrates advanced ML concepts and user-friendly design.",
+        "A Mini Machine Learning Project that aims to predict the survivability status of the patient with cancer using the Colorectal Cancer Risk & Survival Dataset.",
       techStack: [
-        { name: "Python", color: "#3776AB" },
-        { name: "TensorFlow", color: "#FF6F00" },
-        { name: "React", color: "#61DAFB" },
+        { name: "Machine Learning", color: "#0000FF" },
+        { name: "scikit-learn", color: "#00FF00" },
+        { name: "EDA", color: "#FF0000" },
       ],
       additionalImages: [
         "/projects/ai-image-generator-1.png",
@@ -87,51 +88,171 @@ export default function Projects() {
       ],
     },
     {
-      title: "E-commerce Platform",
-      imageSrc: "/projects/ecommerce.png",
+      title: "Energy Efficiency in Buildings",
+      imageSrc: "/banners/energy.png",
       imageAlt: "E-commerce Platform Screenshot",
-      projectUrl: "https://github.com/yourusername/ecommerce",
+      projectUrl: "https://github.com/wncelrcn/Energy_Efficiency",
       description:
-        "A full-featured e-commerce solution built with Next.js, MongoDB, and Stripe integration. This platform includes user authentication, product management, shopping cart functionality, secure checkout, and responsive design for all devices.",
+        "A CS190-1 (Introduction to Computational Learning Theory) Machine Learning Project that focuses on estimating the heating load (Y1) in simulated buildings with different Linear Regression Algorithms using the Energy Efficiency Dataset.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "Machine Learning", color: "#0000FF" },
+        { name: "scikit-learn", color: "#00FF00" },
+        { name: "EDA", color: "#FF0000" },
+      ],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "Wizzy",
+      imageSrc: "/banners/wizzy.png",
+      imageAlt: "AI Flashcard App",
+      projectUrl: "https://github.com/wncelrcn/Wizzy",
+      description:
+        "Wizzy is an AI-powered flashcard app designed to enhance your learning experience. Made using Next.JS, Material UI, Groq AI API, and Firebase.",
       techStack: [
         { name: "Next.js", color: "#000000" },
-        { name: "MongoDB", color: "#47A248" },
-        { name: "Stripe", color: "#008CDD" },
-      ],
-      additionalImages: [
-        "/projects/ai-image-generator-1.png",
-        "/projects/ai-image-generator-2.png",
-      ],
-    },
-    {
-      title: "Weather Dashboard",
-      imageSrc: "/projects/weather-app.png",
-      imageAlt: "Weather Dashboard Interface",
-      projectUrl: "https://github.com/yourusername/weather-dashboard",
-      description:
-        "An interactive weather application providing real-time forecasts, historical data, and visual weather patterns. This React-based dashboard utilizes the OpenWeather API and features geolocation, interactive charts, and customizable alerts.",
-      techStack: [
-        { name: "React", color: "#61DAFB" },
-        { name: "Node.js", color: "#339933" },
-        { name: "OpenWeather", color: "#EB6E4B" },
-      ],
-      additionalImages: [
-        "/projects/ai-image-generator-1.png",
-        "/projects/ai-image-generator-2.png",
-      ],
-    },
-    {
-      title: "Task Management App",
-      imageSrc: "/projects/task-app.png",
-      imageAlt: "Task Management Application",
-      projectUrl: "https://github.com/yourusername/task-manager",
-      description:
-        "A productivity tool built with Vue.js and Firebase that helps users organize tasks, set priorities, and track progress. Features include drag-and-drop organization, deadline reminders, team collaboration, and customizable workspaces.",
-      techStack: [
-        { name: "Vue.js", color: "#4FC08D" },
+        { name: "Material UI", color: "#0000FF" },
         { name: "Firebase", color: "#FFCA28" },
-        { name: "Tailwind", color: "#06B6D4" },
+        { name: "Groq AI", color: "#FF0000" },
       ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "https://wizzyflashcards.vercel.app/",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "EduBot",
+      imageSrc: "/banners/eduot.png",
+      imageAlt: "EduBot",
+      projectUrl: "https://github.com/wncelrcn/EduBot",
+      description:
+        "An AI ChatBot aimed to help students in Coding, Grammar, Research, and Plagiarism. This project is part of the required projects for the Headstarter AI Software Engineering Fellowship.",
+      techStack: [
+        { name: "Next.js", color: "#000000" },
+        { name: "Firebase", color: "#FFCA28" },
+        { name: "Groq AI", color: "#FF0000" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "https://edubot-headstarter.vercel.app/login",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "ClassMate",
+      imageSrc: "/banners/classmate.png",
+      imageAlt: "ClassMate",
+      projectUrl: "https://github.com/wncelrcn/ClassMate",
+      description:
+        "An Android Xamarin App Project for IT123P - A Student Companion App aimed to improve students' productivity levels",
+      techStack: [
+        { name: "Android", color: "#00FF00" },
+        { name: "Xamarin", color: "#0000FF" },
+        { name: "C#", color: "#0000FF" },
+        { name: "MySQL", color: "#FF0000" },
+        { name: "PHP", color: "#0000FF" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "TrendLease",
+      imageSrc: "/banners/trendlease.png",
+      imageAlt: "Trendlease",
+      projectUrl: "https://github.com/wncelrcn/ClassMate",
+      description:
+        "A Fashion Renting Service Web App for IT114L Machine Problem Project - Made using ASP.NET WebForms, SQL, CSS, Bootstrap",
+      techStack: [
+        { name: "ASP.NET", color: "#0000FF" },
+        { name: "C#", color: "#0000FF" },
+        { name: "MS SQL", color: "#FF0000" },
+        { name: "Bootstrap", color: "#FF00FF" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "https://trendlease.azurewebsites.net",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "Telelet",
+      imageSrc: "/banners/telelet.png",
+      imageAlt: "Telelet",
+      projectUrl: "https://github.com/wncelrcn/Telelet",
+      description:
+        "A Twitter Clone Project for IT114L - Made using HTML, CSS, JavaScript, Node.js, TwitterCloneApi and Free News Api",
+      techStack: [
+        { name: "HTML", color: "#FF0000" },
+        { name: "CSS", color: "#FF00FF" },
+        { name: "JavaScript", color: "#FFCA28" },
+        { name: "Node.js", color: "#00FF00" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "Personal Portfolio",
+      imageSrc: "/banners/portfolio.png",
+      imageAlt: "Portfolio",
+      projectUrl: "https://github.com/wncelrcn/wncelrcnn",
+      description:
+        "Personal Portfolio Website - Made using Next.js, and Material UI",
+      techStack: [
+        { name: "Next.js", color: "#000000" },
+        { name: "Material UI", color: "#0000FF" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "https://wncelrcn.github.io",
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "Mapúa MCL Bus Tap",
+      imageSrc: "/banners/bustap.png",
+      imageAlt: "Mapúa MCL Bus Tap",
+      projectUrl: "#",
+      description:
+        "A Mobile Shuttle Booking Application UI/UX for Mapúa MCL - Made using Figma",
+      techStack: [
+        { name: "Figma", color: "#0000FF" },
+        { name: "UI/UX", color: "#FF0000" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
       additionalImages: [
         "/projects/ai-image-generator-1.png",
         "/projects/ai-image-generator-2.png",
@@ -141,16 +262,21 @@ export default function Projects() {
 
   const row2Projects = [
     {
-      title: "Social Media Analytics",
-      imageSrc: "/projects/social-analytics.png",
-      imageAlt: "Social Media Analytics Dashboard",
-      projectUrl: "https://github.com/yourusername/social-analytics",
+      title: "Breast Cancer Classification",
+      imageSrc: "/banners/breast.png",
+      imageAlt: "Breast Cancer ML Project",
+      projectUrl: "https://github.com/wncelrcn/Breast-Cancer-Diagnosis",
       description:
-        "A comprehensive analytics platform for social media performance tracking. Built with Django and PostgreSQL, this tool aggregates metrics across multiple platforms, provides sentiment analysis, and generates actionable insights through an intuitive dashboard.",
+        "A CS190-1 (Introduction to Computational Learning Theory) Machine Learning Project that focuses on applying and comparing various machine learning algorithms to classify breast tumors as benign or malignant using the Breast Cancer Wisconsin (Diagnostic) dataset.",
+      paperUrl:
+        "https://drive.google.com/file/d/1TAI-I2Be56vEgABKIIq6hgHxP9ZyDMJN/view?usp=sharing",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
       techStack: [
-        { name: "Python", color: "#3776AB" },
-        { name: "Django", color: "#092E20" },
-        { name: "PostgreSQL", color: "#336791" },
+        { name: "Machine Learning", color: "#0000FF" },
+        { name: "scikit-learn", color: "#00FF00" },
+        { name: "EDA", color: "#FF0000" },
       ],
       additionalImages: [
         "/projects/ai-image-generator-1.png",
@@ -158,16 +284,19 @@ export default function Projects() {
       ],
     },
     {
-      title: "Real-time Chat App",
-      imageSrc: "/projects/chat-app.png",
-      imageAlt: "Real-time Chat Application",
-      projectUrl: "https://github.com/yourusername/chat-app",
+      title: "SkyTrack",
+      imageSrc: "/banners/skytrack.png",
+      imageAlt: "Realtime Weather App",
+      projectUrl: "https://github.com/wncelrcn/SkyTrack",
       description:
-        "A modern messaging application utilizing Socket.io for real-time communication. Features include private and group conversations, message encryption, file sharing, and user presence detection, all built on a scalable Express and MongoDB backend.",
+        "A sleek weather app featuring real-time location tracking and interactive maps. Built with Next.js, Material UI, and powered by the OpenWeather API.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrL: "#",
       techStack: [
-        { name: "Socket.io", color: "#010101" },
-        { name: "Express", color: "#000000" },
-        { name: "MongoDB", color: "#47A248" },
+        { name: "Next.js", color: "#000000" },
+        { name: "Material UI", color: "#0000FF" },
       ],
       additionalImages: [
         "/projects/ai-image-generator-1.png",
@@ -175,16 +304,21 @@ export default function Projects() {
       ],
     },
     {
-      title: "Fitness Tracker",
-      imageSrc: "/projects/fitness-tracker.png",
-      imageAlt: "Fitness Tracking Application",
-      projectUrl: "https://github.com/yourusername/fitness-tracker",
+      title: "Presenza",
+      imageSrc: "/banners/presenza.png",
+      imageAlt: "Presenza",
+      projectUrl: "https://github.com/wncelrcn/Presenza",
       description:
-        "A mobile fitness application built with React Native that enables users to track workouts, monitor nutrition, and achieve health goals. The app features exercise libraries, personalized workout plans, progress visualization, and social sharing capabilities.",
+        "An Event-based Attendance Management System with Face Recognition Technology. This is the Event Organizer System. Made using Next.JS, Daisy UI, Firebase, and OpenCV Python.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
       techStack: [
-        { name: "React Native", color: "#61DAFB" },
-        { name: "GraphQL", color: "#E10098" },
-        { name: "AWS", color: "#FF9900" },
+        { name: "Next.js", color: "#000000" },
+        { name: "Daisy UI", color: "#0000FF" },
+        { name: "OpenCV", color: "#FF0000" },
+        { name: "Firebase", color: "#FFCA28" },
       ],
       additionalImages: [
         "/projects/ai-image-generator-1.png",
@@ -192,17 +326,123 @@ export default function Projects() {
       ],
     },
     {
-      title: "Budget Management",
-      imageSrc: "/projects/budget-app.png",
-      imageAlt: "Budget Management Application",
-      projectUrl: "https://github.com/yourusername/budget-app",
+      title: "XOXO",
+      imageSrc: "/banners/xoxo.png",
+      imageAlt: "XOXO",
+      projectUrl: "https://github.com/wncelrcn/XOXO",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
       description:
-        "A personal finance tool built with Angular that helps users track expenses, set budgets, and visualize spending patterns. Features include account integration, expense categorization, goal setting, and financial projection tools with interactive charts.",
+        "This is a simple and fun Tic-Tac-Toe Game built using Swift and SwiftUI.",
       techStack: [
-        { name: "Angular", color: "#DD0031" },
-        { name: "TypeScript", color: "#3178C6" },
-        { name: "Chart.js", color: "#FF6384" },
+        { name: "Swift", color: "#FF0000" },
+        { name: "SwiftUI", color: "#0000FF" },
       ],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "JLR Food Products Trading",
+      imageSrc: "/banners/jlr.png",
+      imageAlt: "JLR Food Products Trading Project Management Paper",
+      projectUrl: "#",
+      paperUrl:
+        "https://drive.google.com/file/d/1d2Ht0118uzwjjWE7GmBVd4QKGhh-_7VO/view",
+      figmaUrls: [
+        "https://www.figma.com/proto/eKdswARLABQaAg2zgaDyfx/Customer-Website-Prototype?node-id=0-1&t=7CVfLre8lTIALmvH-1",
+        "https://www.figma.com/proto/WYgoRCaEx2esymLNMbMc0e/Admin-and-Employee-Website-Prototype?node-id=0-1&t=uweDvXfCgUO2aKMO-1",
+      ],
+      presentationUrl: "#",
+      websiteUrl: "#",
+      description:
+        "A comprehensive Project Management Paper for the development of the Order, Sales, and Inventory Management System (OSIMS) at JLR Food Products Trading. The paper outlined project scope, objectives, timelines, risk management strategies, and resource allocation. It emphasized stakeholder engagement, project milestones, and deliverables to ensure successful implementation and operational efficiency.",
+      techStack: [
+        { name: "Project Management", color: "#0000FF" },
+        { name: "UI/UX", color: "#FF0000" },
+        { name: "Figma", color: "#FF00FF" },
+      ],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "JLR OSIMS",
+      imageSrc: "/banners/osims.png",
+      imageAlt: "JLR Food Products Trading OSIMS",
+      projectUrl: "https://github.com/wncelrcn/JLR-FoodProducts-Trading-WebApp",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      description:
+        "An Order, Sales, And Inventory Management Website for JLR Food Products Trading",
+      techStack: [
+        { name: "ASP.NET", color: "#0000FF" },
+        { name: "C#", color: "#0000FF" },
+        { name: "MS SQL", color: "#FF0000" },
+      ],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "ShuttleEase",
+      imageSrc: "/banners/shuttleease.png",
+      imageAlt: "ShuttleEase",
+      projectUrl: "#",
+      description:
+        "A Tech Startup Project for Technopreneurship Course - A Mobile Shuttle Booking Application for Mapúa MCL",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [{ name: "Technopreneurship", color: "#FF0000" }],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "Pixel Quest",
+      imageSrc: "/banners/pixelquest.png",
+      imageAlt: "Pixel Quest",
+      projectUrl: "https://github.com/wncelrcn/PixelQuest",
+      description:
+        "A Machine Problem Project for IT111L, A Pixel Maze Game made in C# WinForms",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "C#", color: "#0000FF" },
+        { name: "Windows Forms", color: "#FF0000" },
+      ],
+      additionalImages: [
+        "/projects/ai-image-generator-1.png",
+        "/projects/ai-image-generator-2.png",
+      ],
+    },
+    {
+      title: "4Pycs1Word",
+      imageSrc: "/banners/4pycs.png",
+      imageAlt: "4Pycs1Word",
+      projectUrl: "#",
+      description:
+        "A 4 Pics 1 Word Clone Game made in Python - Made using Python, and Tkinter",
+      techStack: [
+        { name: "Python", color: "#FFCA28" },
+        { name: "Tkinter", color: "#FF0000" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
       additionalImages: [
         "/projects/ai-image-generator-1.png",
         "/projects/ai-image-generator-2.png",
