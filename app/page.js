@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -16,6 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+import { motion } from "framer-motion";
 
 const HelloBubble = styled(Box)({
   backgroundColor: "white",
@@ -162,6 +163,42 @@ export default function Home() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
+  const titles = [
+    "An Aspiring ML Engineer",
+    "An Aspiring Software Engineer",
+    "A UI/UX Designer",
+    "A Fullstack Developer",
+    "A Problem Solver",
+    "A Creative Thinker",
+    "A Lifelong Learner",
+  ];
+  const [currentTitleIdx, setCurrentTitleIdx] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    let timeout;
+    if (typing) {
+      if (displayed.length < titles[currentTitleIdx].length) {
+        timeout = setTimeout(() => {
+          setDisplayed(titles[currentTitleIdx].slice(0, displayed.length + 1));
+        }, 60);
+      } else {
+        timeout = setTimeout(() => setTyping(false), 1200);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayed(displayed.slice(0, -1));
+        }, 30);
+      } else {
+        setTyping(true);
+        setCurrentTitleIdx((prev) => (prev + 1) % titles.length);
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, typing, currentTitleIdx, titles]);
+
   return (
     <Container
       maxWidth="lg"
@@ -238,6 +275,10 @@ export default function Home() {
       </StarSvg>
 
       <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -247,7 +288,12 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <HelloBubble>
+        <HelloBubble
+          component={motion.div}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
           <Typography
             variant="body1"
             sx={{ fontFamily: "var(--font-urbanist)", fontWeight: 500 }}
@@ -257,10 +303,49 @@ export default function Home() {
         </HelloBubble>
 
         <Box sx={{ mt: 2, mb: 4 }}>
-          <NameText variant="h1">
+          <NameText
+            variant="h1"
+            component={motion.div}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             I'm <span className="highlight">Wince Larcen</span>,
           </NameText>
-          <TitleText variant="h1">Aspiring Software Engineer</TitleText>
+          <TitleText
+            variant="h1"
+            component={motion.div}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            sx={{ minHeight: { xs: "5rem", sm: "7rem", md: "10rem" } }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                display: "inline-block",
+                maxWidth: "100%",
+                wordBreak: "break-word",
+                paddingRight: "4px",
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  right: 0,
+                  top: "10%",
+                  height: "80%",
+                  width: "2px",
+                  backgroundColor: "#4DB4D7",
+                  animation: "blink 1s step-end infinite",
+                  "@keyframes blink": {
+                    "0%, 100%": { opacity: 1 },
+                    "50%": { opacity: 0 },
+                  },
+                },
+              }}
+            >
+              {displayed}
+            </Box>
+          </TitleText>
         </Box>
       </Box>
 
