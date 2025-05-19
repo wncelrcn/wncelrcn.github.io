@@ -11,10 +11,10 @@ const ModalContainer = styled(Box)(({ theme }) => ({
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%",
-  maxWidth: "1200px",
-  height: "80vh",
-  maxHeight: "700px",
+  width: "95%",
+  maxWidth: "1600px",
+  height: "90vh",
+  maxHeight: "1350px",
   backgroundColor: "white",
   borderRadius: "16px",
   boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
@@ -22,24 +22,27 @@ const ModalContainer = styled(Box)(({ theme }) => ({
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
-    height: "90vh",
-    maxHeight: "90vh",
+    height: "95vh",
+    maxHeight: "95vh",
   },
 }));
 
 const ImageSection = styled(Box)(({ theme }) => ({
-  width: "50%",
+  width: "60%",
   height: "100%",
   position: "relative",
-  backgroundColor: "#E0E0E0",
+  backgroundColor: "white",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    height: "40%",
+    height: "50%",
   },
 }));
 
 const ContentSection = styled(Box)(({ theme }) => ({
-  width: "50%",
+  width: "40%",
   height: "100%",
   padding: "40px",
   display: "flex",
@@ -47,7 +50,7 @@ const ContentSection = styled(Box)(({ theme }) => ({
   overflowY: "auto",
   [theme.breakpoints.down("md")]: {
     width: "100%",
-    height: "60%",
+    height: "50%",
     padding: "24px",
   },
   [theme.breakpoints.down("sm")]: {
@@ -219,16 +222,6 @@ export default function ProjectModal({
     additionalImages: [],
   },
 }) {
-  // Debug log to check what values are coming in
-  console.log("Project data:", {
-    websiteUrl: project.websiteUrl,
-    projectUrl: project.projectUrl,
-    paperUrl: project.paperUrl,
-    figmaUrl: project.figmaUrl,
-    figmaUrls: project.figmaUrls,
-    presentationUrl: project.presentationUrl,
-  });
-
   const handleGitHubClick = () => {
     if (project.projectUrl !== "#") {
       window.open(project.projectUrl, "_blank");
@@ -286,9 +279,9 @@ export default function ProjectModal({
                 height: "100%",
                 overflowX: "auto",
                 display: "flex",
-                scrollbarWidth: "none", // <-- For Firefox
+                scrollbarWidth: "none",
                 "&::-webkit-scrollbar": {
-                  display: "none", // <-- For Chrome, Safari, Edge
+                  display: "none",
                 },
                 [theme.breakpoints.down("md")]: {
                   height: "100%",
@@ -302,29 +295,72 @@ export default function ProjectModal({
                     minWidth: "100%",
                     height: "100%",
                     position: "relative",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     [theme.breakpoints.down("md")]: {
                       height: "100%",
                     },
                   })}
                 >
-                  <Image
-                    src={src}
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
+                  <Box
+                    sx={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      "& > span": {
+                        position: "relative !important",
+                        width: "100% !important",
+                        height: "100% !important",
+                      },
+                      "& img": {
+                        objectFit: "contain !important",
+                        maxWidth: "1080px !important",
+                        maxHeight: "1350px !important",
+                      },
+                    }}
+                  >
+                    <Image
+                      src={src}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 60vw"
+                    />
+                  </Box>
                 </Box>
               ))}
             </Box>
           ) : project.imageSrc ? (
-            <Image
-              src={project.imageSrc}
-              alt={project.imageAlt || project.title}
-              fill
-              style={{ objectFit: "cover" }}
-              sizes="(max-width: 900px) 100vw, 50vw"
-            />
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                "& > span": {
+                  position: "relative !important",
+                  width: "100% !important",
+                  height: "100% !important",
+                },
+                "& img": {
+                  objectFit: "contain !important",
+                  maxWidth: "1080px !important",
+                  maxHeight: "1350px !important",
+                },
+              }}
+            >
+              <Image
+                src={project.imageSrc}
+                alt={project.imageAlt || project.title}
+                fill
+                sizes="(max-width: 900px) 100vw, 60vw"
+              />
+            </Box>
           ) : (
             <Box
               sx={(theme) => ({

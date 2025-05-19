@@ -23,7 +23,10 @@ const urbanist = Urbanist({
 
 export const metadata = {
   title: "Wince Larcen",
-  description: "Personal portfolio website",
+  description: "Wince Larcen Rivano's Personal Portfolio",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
