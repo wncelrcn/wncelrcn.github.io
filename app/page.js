@@ -71,9 +71,14 @@ const HalfCircle = styled(Box)(({ theme }) => ({
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {
     height: "500px",
+    marginTop: "6rem",
   },
   [theme.breakpoints.down("sm")]: {
     height: "300px",
+    width: "100%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "4rem",
   },
   "&::before": {
     content: '""',
@@ -86,6 +91,12 @@ const HalfCircle = styled(Box)(({ theme }) => ({
     bottom: 0,
     left: 0,
     zIndex: 0,
+    [theme.breakpoints.down("sm")]: {
+      borderTopLeftRadius: "100% 100%",
+      borderTopRightRadius: "100% 100%",
+      width: "100%",
+      height: "100%",
+    },
   },
 }));
 
@@ -97,7 +108,7 @@ const StarSvg = styled("svg")({
   zIndex: 1,
 });
 
-const ConnectButtonGroup = styled(Box)({
+const ConnectButtonGroup = styled(Box)(({ theme }) => ({
   position: "absolute",
   bottom: "5%",
   left: "50%",
@@ -106,9 +117,17 @@ const ConnectButtonGroup = styled(Box)({
   display: "flex",
   justifyContent: "center",
   width: "100%",
-});
+  [theme.breakpoints.down("sm")]: {
+    height: "40px",
+    width: "100%",
+    bottom: "2%",
+  },
+  [theme.breakpoints.down("md")]: {
+    bottom: "3%",
+  },
+}));
 
-const ConnectButton = styled(Button)({
+const ConnectButton = styled(Button)(({ theme }) => ({
   color: "white",
   borderColor: "white",
   borderRadius: "50px",
@@ -120,7 +139,14 @@ const ConnectButton = styled(Button)({
     borderColor: "white",
     backgroundColor: "rgba(255, 255, 255, 0.1)",
   },
-});
+  [theme.breakpoints.down("sm")]: {
+    padding: "6px 12px",
+    fontSize: "0.8rem",
+    "& .MuiSvgIcon-root": {
+      fontSize: "1rem",
+    },
+  },
+}));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
@@ -350,7 +376,16 @@ export default function Home() {
       </Box>
 
       {/* Half Circle element with profile picture and connect buttons */}
-      <HalfCircle>
+      <HalfCircle
+        sx={{
+          opacity: 0,
+          animation: "fadeIn 1s ease-out 1.2s forwards",
+          "@keyframes fadeIn": {
+            from: { opacity: 0 },
+            to: { opacity: 1 },
+          },
+        }}
+      >
         {/* Profile picture */}
         <Box
           sx={{
@@ -358,11 +393,18 @@ export default function Home() {
             bottom: 0,
             left: "50%",
             transform: "translateX(-50%)",
-            width: { xs: "350px", sm: "550px", md: "750px" },
+            width: { xs: "350px", sm: "500px", md: "750px" },
             height: "auto",
             zIndex: 1,
             display: "flex",
             alignItems: "flex-end",
+            opacity: 0,
+            transform: "translate(-50%, 100px)",
+            animation: "slideUp 0.8s ease-out 1.5s forwards",
+            "@keyframes slideUp": {
+              from: { opacity: 0, transform: "translate(-50%, 100px)" },
+              to: { opacity: 1, transform: "translate(-50%, 0)" },
+            },
           }}
         >
           <Box
@@ -380,12 +422,40 @@ export default function Home() {
         </Box>
 
         {/* Connect buttons at the bottom */}
-        <ConnectButtonGroup>
+        <ConnectButtonGroup
+          sx={{
+            opacity: 0,
+            transform: "translateX(-50%) translateY(20px)",
+            animation: "fadeInUp 0.6s ease-out 2s forwards",
+            "@keyframes fadeInUp": {
+              from: {
+                opacity: 0,
+                transform: "translateX(-50%) translateY(20px)",
+              },
+              to: { opacity: 1, transform: "translateX(-50%) translateY(0)" },
+            },
+          }}
+        >
           <ConnectButton
             variant="outlined"
-            startIcon={<Typography sx={{ mr: 1 }}>Connect with me:</Typography>}
+            startIcon={
+              <Typography
+                sx={{
+                  mr: 1,
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                Connect with me:
+              </Typography>
+            }
           >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: 1, sm: 2 },
+              }}
+            >
               <a
                 href="https://github.com/wncelrcn"
                 target="_blank"
@@ -436,7 +506,15 @@ export default function Home() {
       </HalfCircle>
 
       {/* About Me Section */}
-      <Container maxWidth="lg" sx={{ mt: 12, mb: 8 }}>
+      <Container
+        maxWidth="lg"
+        sx={{ mt: 12, mb: 8 }}
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <Box
           sx={{
             display: "flex",
@@ -445,7 +523,14 @@ export default function Home() {
           }}
         >
           {/* Left Column - About Me */}
-          <Box sx={{ flex: 1 }}>
+          <Box
+            sx={{ flex: 1 }}
+            component={motion.div}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <Box
               component="img"
               src="./about-me.png"
@@ -517,11 +602,24 @@ export default function Home() {
           </Box>
 
           {/* Right Column - Values */}
-          <Box sx={{ flex: 1 }}>
+          <Box
+            sx={{ flex: 1 }}
+            component={motion.div}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <SectionTitle>MY VALUES</SectionTitle>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
-                <ValueCard>
+                <ValueCard
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
                   <ValueTitle>📒 Be a Lifelong Learner.</ValueTitle>
                   <ValueDescription>
                     Growth comes from constant curiosity. I actively seek out
@@ -533,7 +631,13 @@ export default function Home() {
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <ValueCard>
+                <ValueCard
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
                   <ValueTitle>🌱 Grow with Purpose.</ValueTitle>
                   <ValueDescription>
                     I believe that personal and professional growth should be
@@ -545,7 +649,13 @@ export default function Home() {
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <ValueCard>
+                <ValueCard
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
                   <ValueTitle>💛 Lead with Passion.</ValueTitle>
                   <ValueDescription>
                     Loving what I do fuels my energy and commitment. It inspires
@@ -556,7 +666,13 @@ export default function Home() {
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <ValueCard>
+                <ValueCard
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
                   <ValueTitle>😊 Stay Human.</ValueTitle>
                   <ValueDescription>
                     Kindness, empathy, and authenticity matter. I strive to
@@ -567,7 +683,13 @@ export default function Home() {
                 </ValueCard>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <ValueCard>
+                <ValueCard
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                >
                   <ValueTitle>✊ Trust the Process.</ValueTitle>
                   <ValueDescription>
                     Success is built through embracing challenges, setbacks, and
