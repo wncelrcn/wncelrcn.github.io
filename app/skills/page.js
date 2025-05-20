@@ -10,6 +10,7 @@ import {
   ListItem,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
@@ -71,106 +72,157 @@ const BulletList = styled(List)({
   marginLeft: "1rem",
 });
 
+// Motion components
+const MotionContainer = motion(Container);
+const MotionBox = motion(Box);
+const MotionGrid = motion(Grid);
+const MotionListItem = motion(ListItem);
+
 export default function Skills() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const skillCategoryVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
+  const listItemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <Container maxWidth="lg" sx={{ mt: 8, mb: 8 }}>
-      <Box>
+    <MotionContainer
+      maxWidth="lg"
+      sx={{ mt: 8, mb: 8 }}
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <MotionBox variants={headingVariants}>
         <SectionTitle>SKILLS AND EXPERTISE</SectionTitle>
         <MainTitle>How I Add Value</MainTitle>
         <SubTitle>
           Backed by a strong foundation in Computer Science, I bring a versatile
           skill set to every project.
         </SubTitle>
+      </MotionBox>
 
-        {/* Skills Section */}
-        <Grid container>
-          <Grid item xs={12}>
-            <Box sx={{ mb: 5 }}>
-              <SkillCategory>Machine Learning</SkillCategory>
-              <Box sx={{ ml: 1 }}>
-                <BulletList>
-                  <ListItem>
-                    Experienced in implementing supervised and unsupervised
-                    learning algorithms for classification and clustering.
-                  </ListItem>
-                  <ListItem>
-                    Developed a face recognition model, using the
-                    face_recognition library and OpenCV, which uses pre- trained
-                    models for face detection and encoding.
-                  </ListItem>
-                  <ListItem>
-                    Developed multiple object detection models using YOLO v11.
-                  </ListItem>
-                  <ListItem>
-                    Trained a natural language processing (NLP) model for text
-                    analysis and sentiment classification.
-                  </ListItem>
-                </BulletList>
-              </Box>
+      {/* Skills Section */}
+      <MotionGrid container>
+        <Grid item xs={12}>
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Machine Learning</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Experienced in implementing supervised and unsupervised
+                  learning algorithms for classification and clustering.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Developed a face recognition model, using the face_recognition
+                  library and OpenCV, which uses pre- trained models for face
+                  detection and encoding.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Developed multiple object detection models using YOLO v11.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Trained a natural language processing (NLP) model for text
+                  analysis and sentiment classification.
+                </MotionListItem>
+              </BulletList>
             </Box>
+          </MotionBox>
 
-            <Box sx={{ mb: 5 }}>
-              <SkillCategory>Front-end Development</SkillCategory>
-              <Box sx={{ ml: 1 }}>
-                <BulletList>
-                  <ListItem>
-                    Developed multiple web and mobile projects using front-end
-                    frameworks including React, React Native, Next.js, Vue.js,
-                    and ASP.NET.
-                  </ListItem>
-                  <ListItem>
-                    Skilled in designing user-friendly interfaces for web and
-                    mobile applications using Figma.
-                  </ListItem>
-                  <ListItem>
-                    Proficient in using different styling frameworks such as
-                    TailwindCSS, Material UI, DaisyUI, and Bootstrap.
-                  </ListItem>
-                  <ListItem>
-                    Created dashboards and data visualizations using ChartJs.
-                  </ListItem>
-                </BulletList>
-              </Box>
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Front-end Development</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Developed multiple web and mobile projects using front-end
+                  frameworks including React, React Native, Next.js, Vue.js, and
+                  ASP.NET.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Skilled in designing user-friendly interfaces for web and
+                  mobile applications using Figma.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Proficient in using different styling frameworks such as
+                  TailwindCSS, Material UI, DaisyUI, and Bootstrap.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Created dashboards and data visualizations using ChartJs.
+                </MotionListItem>
+              </BulletList>
             </Box>
+          </MotionBox>
 
-            <Box sx={{ mb: 5 }}>
-              <SkillCategory>Back-end Development</SkillCategory>
-              <Box sx={{ ml: 1 }}>
-                <BulletList>
-                  <ListItem>
-                    Created RESTful APIs using Express.js and Flask.
-                  </ListItem>
-                  <ListItem>
-                    Has experience in using and integrating difference Database
-                    Management Systems like MS SQL, MySQL, Firebase, Supabase,
-                    and MongoDB.
-                  </ListItem>
-                  <ListItem>
-                    Knowledgeable in software design and architecture of
-                    software projects.
-                  </ListItem>
-                </BulletList>
-              </Box>
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Back-end Development</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Created RESTful APIs using Express.js and Flask.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Has experience in using and integrating difference Database
+                  Management Systems like MS SQL, MySQL, Firebase, Supabase, and
+                  MongoDB.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Knowledgeable in software design and architecture of software
+                  projects.
+                </MotionListItem>
+              </BulletList>
             </Box>
+          </MotionBox>
 
-            <Box sx={{ mb: 5 }}>
-              <SkillCategory>Project Management</SkillCategory>
-              <Box sx={{ ml: 1 }}>
-                <BulletList>
-                  <ListItem>
-                    Spearheaded different teams through the planning, analysis,
-                    design, and implementation of various software projects.
-                  </ListItem>
-                  <ListItem>
-                    Used project management tools such as Trello, Jira, and
-                    GitHub for managing project deliverables
-                  </ListItem>
-                </BulletList>
-              </Box>
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Project Management</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Spearheaded different teams through the planning, analysis,
+                  design, and implementation of various software projects.
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Used project management tools such as Trello, Jira, and GitHub
+                  for managing project deliverables
+                </MotionListItem>
+              </BulletList>
             </Box>
-          </Grid>
+          </MotionBox>
         </Grid>
-      </Box>
-    </Container>
+      </MotionGrid>
+    </MotionContainer>
   );
 }

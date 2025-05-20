@@ -4,6 +4,7 @@ import React from "react";
 import { Container, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CertificationBox from "@/components/CertificationBox";
+import { motion } from "framer-motion";
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
@@ -88,6 +89,12 @@ const FixedWidthContainer = styled(Box)(({ theme }) => ({
     maxWidth: "320px",
   },
 }));
+
+// Motion components
+const MotionContainer = motion(Container);
+const MotionBox = motion(Box);
+const MotionCategoryTitle = motion(CategoryTitle);
+const MotionFixedWidthContainer = motion(FixedWidthContainer);
 
 const mlCertifications = [
   {
@@ -261,88 +268,161 @@ const otherCertifications = [
 ];
 
 export default function Certifications() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const headingVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const categoryVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const gridVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const certBoxVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
+  };
+
   return (
-    <Container maxWidth="lg" sx={{ mt: 8, mb: 8 }}>
-      <Box>
+    <MotionContainer
+      maxWidth="lg"
+      sx={{ mt: 8, mb: 8 }}
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <MotionBox variants={headingVariants}>
         <SectionTitle>CERTIFICATIONS</SectionTitle>
         <MainTitle>Licenses & Certifications</MainTitle>
         <SubTitle>
           Recognized credentials that validate my skills and ongoing commitment
           to professional development.
         </SubTitle>
-      </Box>
+      </MotionBox>
 
       <Box>
-        <CategoryTitle>MACHINE LEARNING CERTIFICATIONS</CategoryTitle>
+        <MotionCategoryTitle variants={categoryVariants}>
+          MACHINE LEARNING CERTIFICATIONS
+        </MotionCategoryTitle>
         <ScrollableRow>
-          <FixedWidthContainer>
+          <MotionFixedWidthContainer variants={gridVariants}>
             {mlCertifications.map((cert, index) => (
-              <CertificationBox
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                certificateUrl={cert.certificateUrl}
-              />
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
             ))}
-          </FixedWidthContainer>
+          </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <CategoryTitle>WEB DEVELOPMENT CERTIFICATIONS</CategoryTitle>
+        <MotionCategoryTitle variants={categoryVariants}>
+          WEB DEVELOPMENT CERTIFICATIONS
+        </MotionCategoryTitle>
         <ScrollableRow>
-          <FixedWidthContainer>
+          <MotionFixedWidthContainer variants={gridVariants}>
             {webDevCertifications.map((cert, index) => (
-              <CertificationBox
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                certificateUrl={cert.certificateUrl}
-              />
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
             ))}
-          </FixedWidthContainer>
+          </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <CategoryTitle>PYTHON CERTIFICATIONS</CategoryTitle>
+        <MotionCategoryTitle variants={categoryVariants}>
+          PYTHON CERTIFICATIONS
+        </MotionCategoryTitle>
         <ScrollableRow>
-          <FixedWidthContainer>
+          <MotionFixedWidthContainer variants={gridVariants}>
             {pythonCertifications.map((cert, index) => (
-              <CertificationBox
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                certificateUrl={cert.certificateUrl}
-              />
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
             ))}
-          </FixedWidthContainer>
+          </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <CategoryTitle>GOOGLE CLOUD CERTIFICATIONS</CategoryTitle>
+        <MotionCategoryTitle variants={categoryVariants}>
+          GOOGLE CLOUD CERTIFICATIONS
+        </MotionCategoryTitle>
         <ScrollableRow>
-          <FixedWidthContainer>
+          <MotionFixedWidthContainer variants={gridVariants}>
             {cloudCertifications.map((cert, index) => (
-              <CertificationBox
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                certificateUrl={cert.certificateUrl}
-              />
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
             ))}
-          </FixedWidthContainer>
+          </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <CategoryTitle>OTHER CERTIFICATIONS</CategoryTitle>
+        <MotionCategoryTitle variants={categoryVariants}>
+          OTHER CERTIFICATIONS
+        </MotionCategoryTitle>
         <ScrollableRow>
-          <FixedWidthContainer>
+          <MotionFixedWidthContainer variants={gridVariants}>
             {otherCertifications.map((cert, index) => (
-              <CertificationBox
-                key={index}
-                title={cert.title}
-                organization={cert.organization}
-                certificateUrl={cert.certificateUrl}
-              />
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
             ))}
-          </FixedWidthContainer>
+          </MotionFixedWidthContainer>
         </ScrollableRow>
       </Box>
-    </Container>
+    </MotionContainer>
   );
 }
