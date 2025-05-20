@@ -291,8 +291,11 @@ export default function Projects() {
       presentationUrl: "#",
       websiteUrl: "https://wncelrcn.github.io",
       additionalImages: [
-        "./projects/ai-image-generator-1.png",
-        "./projects/ai-image-generator-2.png",
+        "./project-pictures/portfolio_1.png",
+        "./project-pictures/portfolio_2.png",
+        "./project-pictures/portfolio_3.png",
+        "./project-pictures/portfolio_5.png",
+        "./project-pictures/portfolio_6.png",
       ],
     },
     {
