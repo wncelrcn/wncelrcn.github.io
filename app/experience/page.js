@@ -202,7 +202,7 @@ export default function Experience() {
           <TitleWithIcon>
             <IconBox>
               <Image
-                src="/exp/freelance.png"
+                src="./exp/freelance.png"
                 alt="Freelance Software Developer"
                 width={40}
                 height={40}
@@ -234,7 +234,7 @@ export default function Experience() {
           <TitleWithIcon>
             <IconBox style={{ backgroundColor: "#000" }}>
               <Image
-                src="/exp/headstarter.png"
+                src="./exp/headstarter.png"
                 alt="Software Engineering Fellow"
                 width={40}
                 height={40}
@@ -272,7 +272,7 @@ export default function Experience() {
               style={{ backgroundColor: "#fff", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/mmcl.png"
+                src="./exp/mmcl.png"
                 alt="BS in Computer Science"
                 width={40}
                 height={40}
@@ -306,7 +306,7 @@ export default function Experience() {
               style={{ backgroundColor: "#fff", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/scitech.png"
+                src="./exp/scitech.png"
                 alt="STEM Education"
                 width={40}
                 height={40}
@@ -341,7 +341,7 @@ export default function Experience() {
               style={{ backgroundColor: "#fff", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/acm.jpg"
+                src="./exp/acm.jpg"
                 alt="acm"
                 width={40}
                 height={40}
@@ -381,7 +381,7 @@ export default function Experience() {
               style={{ backgroundColor: "#B33131", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/jpcs.jpg"
+                src="./exp/jpcs.jpg"
                 alt="JPCS"
                 width={40}
                 height={40}
@@ -425,7 +425,7 @@ export default function Experience() {
               style={{ backgroundColor: "#98A3E5", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/coss.jpg"
+                src="./exp/coss.jpg"
                 alt="Warframes"
                 width={40}
                 height={40}
@@ -463,7 +463,7 @@ export default function Experience() {
               style={{ backgroundColor: "#fff", border: "1px solid #eee" }}
             >
               <Image
-                src="/exp/codechum.jpg"
+                src="./exp/codechum.jpg"
                 alt="CodeChum"
                 width={40}
                 height={40}
@@ -541,7 +541,7 @@ export default function Experience() {
           >
             <Box sx={{ height: 250, position: "relative" }}>
               <Image
-                src="/exp/warframes-cert.png"
+                src="./exp/warframes-cert.png"
                 alt="Warframes Web Design Competition Certificate"
                 fill
                 style={{ objectFit: "cover" }}
@@ -575,7 +575,7 @@ export default function Experience() {
           >
             <Box sx={{ height: 250, position: "relative" }}>
               <Image
-                src="/exp/codechum-cert.png"
+                src="./exp/codechum-cert.png"
                 alt="CodeChum Programming Challenge"
                 fill
                 style={{ objectFit: "cover" }}
