@@ -5,6 +5,7 @@ import { Container, Typography, Box, List, ListItem } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ImageCarousel from "../../components/ImageCarousel";
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-urbanist)",
@@ -176,6 +177,44 @@ export default function Experience() {
     },
   };
 
+  // Highlight events with their respective images
+  const highlightEvents = [
+    {
+      title: "DLSU Hackercup 2025",
+      images: [
+        "./exp/hackercup-pic.jpg",
+        "./exp/hackercup-2.jpeg",
+        "./exp/metrowatch.png",
+      ],
+    },
+    {
+      title: "National AI Prompt Design Challenge 2025",
+      images: [
+        "./exp/ai prompt-2.jpeg",
+        "./exp/ai prompt-3.jpeg",
+        "./exp/kaiya.png",
+        "./exp/kAIya-2.png",
+        "./exp/ai prompt.png",
+      ],
+    },
+    {
+      title: "Datacamp Scholarship 2025 - Data Engineering Pilipinas",
+      images: ["./exp/datacamp-scholarship.png"],
+    },
+    {
+      title: "UPLB Warframes Web Design Competition",
+      images: [
+        "./exp/warframes-2.jpeg",
+        "./exp/warframes-1.jpeg",
+        "./exp/warframes-cert.png",
+      ],
+    },
+    {
+      title: "CodeChum National Programming Challenge 2024",
+      images: ["./exp/codechum-1.jpeg", "./exp/codechum-cert.png"],
+    },
+  ];
+
   return (
     <MotionContainer
       maxWidth="lg"
@@ -196,6 +235,38 @@ export default function Experience() {
       <MotionSectionHeading variants={sectionHeadingVariants}>
         EXPERIENCE
       </MotionSectionHeading>
+      <MotionExperienceItem variants={experienceItemVariants}>
+        <ExperienceHeader>
+          <TitleWithIcon>
+            <IconBox>
+              <Image
+                src="./exp/codebility.jpeg"
+                alt="Codebility"
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+              />
+            </IconBox>
+            <ExperienceTitle>UI/UX Designer Intern</ExperienceTitle>
+          </TitleWithIcon>
+          <DateRange>Jun 2025 - Present</DateRange>
+        </ExperienceHeader>
+        <BulletList>
+          <MotionListItem variants={listItemVariants}>
+            Designed wireframes and high-fidelity mockups and prototypes for
+            mobile apps and websites, focusing on user experience, and
+            functionality.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Built interactive Figma prototypes and a component-based design
+            system with reusable styles and variants.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Ran quick usability checks and iterated on feedback to improve task
+            completion time and visual consistency.
+          </MotionListItem>
+        </BulletList>
+      </MotionExperienceItem>
 
       <MotionExperienceItem variants={experienceItemVariants}>
         <ExperienceHeader>
@@ -288,10 +359,10 @@ export default function Experience() {
         <BulletList>
           <MotionListItem variants={listItemVariants}>
             President's Lister and Dean's Lister throughout my current stay at
-            Mapúa Malayan Colleges Laguna (Running GWA of 1.1762)
+            Mapúa Malayan Colleges Laguna (Running GWA of 1.162)
           </MotionListItem>
           <MotionListItem variants={listItemVariants}>
-            Currently a Third Year BS Computer Science Student
+            Currently a Fourth Year BS Computer Science Student
           </MotionListItem>
           <MotionListItem variants={listItemVariants}>
             Currently taking Machine Learning Specialization Track
@@ -415,8 +486,128 @@ export default function Experience() {
       </MotionExperienceItem>
 
       <MotionSectionHeading variants={sectionHeadingVariants}>
-        HONORS & AWARDS
+        COMPETITIONS AND AWARDS
       </MotionSectionHeading>
+
+      <MotionExperienceItem variants={experienceItemVariants}>
+        <ExperienceHeader>
+          <TitleWithIcon>
+            <IconBox
+              style={{ backgroundColor: "#000000", border: "1px solid #eee" }}
+            >
+              <Image
+                src="./exp/hackercup.jpg"
+                alt="Hackercup"
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+              />
+            </IconBox>
+            <ExperienceTitle>DLSU Hackercup 2025 - Participant</ExperienceTitle>
+          </TitleWithIcon>
+          <DateRange>Aug 2025</DateRange>
+        </ExperienceHeader>
+        <BulletList>
+          <MotionListItem variants={listItemVariants}>
+            Participated in DLSU's award-winning nationwide hackathon focused on
+            SDG 11 (Sustainable Cities and Communities) with ₱35,000 in total
+            prizes.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Developed MetroWatch, a community-driven safety platform featuring
+            mobile app and web dashboard for real-time incident reporting and
+            community awareness.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Collaborated in a 2-day intensive hackathon to build practical
+            solutions addressing everyday community hassles and urban
+            inefficiencies.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Gained hands-on experience in mobile and web development while
+            participating in workshops and receiving mentorship from industry
+            professionals.
+          </MotionListItem>
+        </BulletList>
+      </MotionExperienceItem>
+
+      <MotionExperienceItem variants={experienceItemVariants}>
+        <ExperienceHeader>
+          <TitleWithIcon>
+            <IconBox
+              style={{ backgroundColor: "#ffffff", border: "1px solid #eee" }}
+            >
+              <Image
+                src="./exp/straits.jpg"
+                alt="AI Prompt"
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+              />
+            </IconBox>
+            <ExperienceTitle>
+              National AI Prompt Design Challenge Philippines 2025 - Participant
+            </ExperienceTitle>
+          </TitleWithIcon>
+          <DateRange>Jun 2025</DateRange>
+        </ExperienceHeader>
+        <BulletList>
+          <MotionListItem variants={listItemVariants}>
+            Collaborated with team members to design AI-powered solutions using
+            advanced prompt engineering techniques and LLM instruction
+            optimization.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Gained hands-on experience with the CAPABARA platform for prompt
+            experimentation and learned ethical AI development practices from
+            industry experts.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Developed and submitted KAIya - an AI-Powered Fitness and Wellness
+            Coach prototype tailored for the Filipino market, addressing local
+            health and wellness needs.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Enhanced understanding of LLM integration in software projects,
+            focusing on efficiency, user experience, and practical
+            implementation strategies.
+          </MotionListItem>
+        </BulletList>
+      </MotionExperienceItem>
+
+      <MotionExperienceItem variants={experienceItemVariants}>
+        <ExperienceHeader>
+          <TitleWithIcon>
+            <IconBox
+              style={{ backgroundColor: "#02ef61", border: "1px solid #eee" }}
+            >
+              <Image
+                src="./exp/datacamp.jpg"
+                alt="Warframes"
+                width={40}
+                height={40}
+                style={{ objectFit: "contain" }}
+              />
+            </IconBox>
+            <ExperienceTitle>
+              Datacamp Scholarship Recipient - Data Engineering Pilipinas
+            </ExperienceTitle>
+          </TitleWithIcon>
+          <DateRange>Apr 2025</DateRange>
+        </ExperienceHeader>
+        <BulletList>
+          <MotionListItem variants={listItemVariants}>
+            Awarded a one-year scholarship to DataCamp by the Data Engineering
+            Pilipinas Community.
+          </MotionListItem>
+          <MotionListItem variants={listItemVariants}>
+            Gained access to premium courses covering data engineering, data
+            science, and machine learning, with hands-on training in Python,
+            SQL, cloud tools, data pipelines, and machine learning model
+            development.
+          </MotionListItem>
+        </BulletList>
+      </MotionExperienceItem>
 
       <MotionExperienceItem variants={experienceItemVariants}>
         <ExperienceHeader>
@@ -501,16 +692,16 @@ export default function Experience() {
 
       <MotionBox mt={6} variants={headingVariants}>
         <MotionTypography
-          variant="h5"
+          variant="h3"
           sx={{
             fontFamily: "var(--font-urbanist)",
             fontWeight: "600",
-            fontSize: "1.5rem",
-            marginBottom: "1.5rem",
+            fontSize: "2rem",
+            marginBottom: "2rem",
             textAlign: "center",
           }}
         >
-          Achievement Highlights
+          Competition Highlights and Achievements
         </MotionTypography>
 
         <Box
@@ -518,81 +709,47 @@ export default function Experience() {
             display: "grid",
             gridTemplateColumns: {
               xs: "1fr",
-              sm: "1fr 1fr",
+              sm: "repeat(3, 1fr)",
             },
             gap: 3,
             mt: 2,
-            maxWidth: "800px",
+            maxWidth: "1200px",
             margin: "0 auto",
           }}
         >
-          <MotionBox
-            sx={{
-              border: "1px solid #eee",
-              borderRadius: "8px",
-              overflow: "hidden",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.02)",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-              },
-            }}
-            variants={highlightCardVariants}
-          >
-            <Box sx={{ height: 250, position: "relative" }}>
-              <Image
-                src="./exp/warframes-cert.png"
-                alt="Warframes Web Design Competition Certificate"
-                fill
-                style={{ objectFit: "cover" }}
+          {highlightEvents.map((event, index) => (
+            <MotionBox
+              key={index}
+              sx={{
+                border: "1px solid #eee",
+                borderRadius: "8px",
+                overflow: "hidden",
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.02)",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                },
+              }}
+              variants={highlightCardVariants}
+            >
+              <ImageCarousel
+                images={event.images}
+                alt={event.title}
+                height={250}
               />
-            </Box>
-            <Box sx={{ p: 2 }}>
-              <Typography
-                sx={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: "600",
-                  fontSize: "1rem",
-                }}
-              >
-                Warframes Web Design Competition
-              </Typography>
-            </Box>
-          </MotionBox>
-
-          <MotionBox
-            sx={{
-              border: "1px solid #eee",
-              borderRadius: "8px",
-              overflow: "hidden",
-              transition: "transform 0.3s ease",
-              "&:hover": {
-                transform: "scale(1.02)",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-              },
-            }}
-            variants={highlightCardVariants}
-          >
-            <Box sx={{ height: 250, position: "relative" }}>
-              <Image
-                src="./exp/codechum-cert.png"
-                alt="CodeChum Programming Challenge"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </Box>
-            <Box sx={{ p: 2 }}>
-              <Typography
-                sx={{
-                  fontFamily: "var(--font-urbanist)",
-                  fontWeight: "600",
-                  fontSize: "1rem",
-                }}
-              >
-                CodeChum National Programming Challenge
-              </Typography>
-            </Box>
-          </MotionBox>
+              <Box sx={{ p: 2 }}>
+                <Typography
+                  sx={{
+                    fontFamily: "var(--font-urbanist)",
+                    fontWeight: "600",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {event.title}
+                </Typography>
+              </Box>
+            </MotionBox>
+          ))}
         </Box>
       </MotionBox>
     </MotionContainer>

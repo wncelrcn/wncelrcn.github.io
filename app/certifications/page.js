@@ -98,10 +98,108 @@ const MotionFixedWidthContainer = motion(FixedWidthContainer);
 
 const mlCertifications = [
   {
+    title: "Exploratory Data Analysis in Python",
+    organization: "DataCamp",
+    certificateUrl:
+      "https://www.datacamp.com/completed/statement-of-accomplishment/course/6441f69c2157010404eecd56f2dda564cfa56e4c",
+  },
+  {
+    title: "Python Data Fundamentals",
+    organization: "DataCamp",
+    certificateUrl:
+      "https://www.datacamp.com/completed/statement-of-accomplishment/track/9af872905102375f14edebb179f79c570559da84",
+  },
+  {
+    title: "Introduction to Data Visualization with Matplotlib",
+    organization: "DataCamp",
+    certificateUrl:
+      "https://www.datacamp.com/completed/statement-of-accomplishment/course/4a82c2f3f531dc6dbaf03a721700722a531a8f2a",
+  },
+  {
+    title: "Introduction to Data Visualization with Seaborn",
+    organization: "DataCamp",
+    certificateUrl:
+      "https://www.datacamp.com/completed/statement-of-accomplishment/course/a469e7417804fb491e05ee7332d90788e28bcba9",
+  },
+  {
+    title: "Fundamentals of Deep Learning",
+    organization: "NVIDIA",
+    certificateUrl:
+      "https://learn.nvidia.com/certificates?id=gH1KSkwERBmV_YIlSDp0VA#",
+  },
+  {
     title: "Exploratory Data Analysis for Machine Learning",
     organization: "IBM",
     certificateUrl:
       "https://www.coursera.org/account/accomplishments/verify/XBOVKP7LNE39",
+  },
+  {
+    title: "Python for Data Science, AI & Development",
+    organization: "IBM",
+    certificateUrl:
+      "https://www.coursera.org/account/accomplishments/verify/AY9JON3ZWI44",
+  },
+
+  {
+    title: "Introduction to Generative AI",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556866?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Introduction to Large Language Models",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556824?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Attention Mechanism",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9951576?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Encoder-Decoder Architecture",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9951691?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Transformer Models and BERT Model",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955998?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+
+  {
+    title: "Introduction to Vertex AI Studio",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955343?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Create Image Captioning Models",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955947?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Introduction to Image Generation",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566346?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Introduction to Responsible AI",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556909?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+  },
+  {
+    title: "Responsible AI: Applying AI Principles with Google Cloud",
+    organization: "Google Cloud Skills Boost",
+    certificateUrl:
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566318?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
   },
 ];
 
@@ -132,36 +230,11 @@ const cloudCertifications = [
     certificateUrl:
       "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9403909?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
   },
-
   {
-    title: "Attention Mechanism",
+    title: "Prepare Data for ML APIs on Google Cloud",
     organization: "Google Cloud Skills Boost",
     certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9951576?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Create Image Captioning Models",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955947?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Encoder-Decoder Architecture",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9951691?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Introduction to Vertex AI Studio",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955343?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Transformer Models and BERT Model",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9955998?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
+      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566280?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
   },
   {
     title: "Build a Secure Google Cloud Network",
@@ -175,42 +248,7 @@ const cloudCertifications = [
     certificateUrl:
       "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9542534?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
   },
-  {
-    title: "Responsible AI: Applying AI Principles with Google Cloud",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566318?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Prepare Data for ML APIs on Google Cloud",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566280?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Introduction to Responsible AI",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556909?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Introduction to Large Language Models",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556824?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Introduction to Image Generation",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9566346?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
-  {
-    title: "Introduction to Generative AI",
-    organization: "Google Cloud Skills Boost",
-    certificateUrl:
-      "https://www.cloudskillsboost.google/public_profiles/962bc156-2b74-456e-98d5-1dc8461a9cea/badges/9556866?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-  },
+
   {
     title: "Implement Load Balancing on Compute Engine",
     organization: "Google Cloud Skills Boost",
@@ -219,14 +257,14 @@ const cloudCertifications = [
   },
 ];
 
-const webDevCertifications = [
-  {
-    title: "Python for Data Science, AI & Development",
-    organization: "IBM",
-    certificateUrl:
-      "https://www.coursera.org/account/accomplishments/verify/AY9JON3ZWI44",
-  },
-];
+// const webDevCertifications = [
+//   {
+//     title: "Python for Data Science, AI & Development",
+//     organization: "IBM",
+//     certificateUrl:
+//       "https://www.coursera.org/account/accomplishments/verify/AY9JON3ZWI44",
+//   },
+// ];
 
 const pythonCertifications = [
   {
@@ -338,11 +376,21 @@ export default function Certifications() {
       </MotionBox>
 
       <Box>
-        <MotionCategoryTitle variants={categoryVariants}>
-          MACHINE LEARNING CERTIFICATIONS
+        <MotionCategoryTitle
+          variants={categoryVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          MACHINE LEARNING AND DATA SCIENCE CERTIFICATIONS
         </MotionCategoryTitle>
         <ScrollableRow>
-          <MotionFixedWidthContainer variants={gridVariants}>
+          <MotionFixedWidthContainer
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {mlCertifications.map((cert, index) => (
               <MotionBox key={index} variants={certBoxVariants}>
                 <CertificationBox
@@ -355,7 +403,7 @@ export default function Certifications() {
           </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <MotionCategoryTitle variants={categoryVariants}>
+        {/* <MotionCategoryTitle variants={categoryVariants}>
           WEB DEVELOPMENT CERTIFICATIONS
         </MotionCategoryTitle>
         <ScrollableRow>
@@ -370,30 +418,23 @@ export default function Certifications() {
               </MotionBox>
             ))}
           </MotionFixedWidthContainer>
-        </ScrollableRow>
+        </ScrollableRow> */}
 
-        <MotionCategoryTitle variants={categoryVariants}>
-          PYTHON CERTIFICATIONS
+        <MotionCategoryTitle
+          variants={categoryVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          GOOGLE CLOUD SKILLS BOOST CERTIFICATIONS
         </MotionCategoryTitle>
         <ScrollableRow>
-          <MotionFixedWidthContainer variants={gridVariants}>
-            {pythonCertifications.map((cert, index) => (
-              <MotionBox key={index} variants={certBoxVariants}>
-                <CertificationBox
-                  title={cert.title}
-                  organization={cert.organization}
-                  certificateUrl={cert.certificateUrl}
-                />
-              </MotionBox>
-            ))}
-          </MotionFixedWidthContainer>
-        </ScrollableRow>
-
-        <MotionCategoryTitle variants={categoryVariants}>
-          GOOGLE CLOUD CERTIFICATIONS
-        </MotionCategoryTitle>
-        <ScrollableRow>
-          <MotionFixedWidthContainer variants={gridVariants}>
+          <MotionFixedWidthContainer
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {cloudCertifications.map((cert, index) => (
               <MotionBox key={index} variants={certBoxVariants}>
                 <CertificationBox
@@ -406,11 +447,48 @@ export default function Certifications() {
           </MotionFixedWidthContainer>
         </ScrollableRow>
 
-        <MotionCategoryTitle variants={categoryVariants}>
+        <MotionCategoryTitle
+          variants={categoryVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          PYTHON CERTIFICATIONS
+        </MotionCategoryTitle>
+        <ScrollableRow>
+          <MotionFixedWidthContainer
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {pythonCertifications.map((cert, index) => (
+              <MotionBox key={index} variants={certBoxVariants}>
+                <CertificationBox
+                  title={cert.title}
+                  organization={cert.organization}
+                  certificateUrl={cert.certificateUrl}
+                />
+              </MotionBox>
+            ))}
+          </MotionFixedWidthContainer>
+        </ScrollableRow>
+
+        <MotionCategoryTitle
+          variants={categoryVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           OTHER CERTIFICATIONS
         </MotionCategoryTitle>
         <ScrollableRow>
-          <MotionFixedWidthContainer variants={gridVariants}>
+          <MotionFixedWidthContainer
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {otherCertifications.map((cert, index) => (
               <MotionBox key={index} variants={certBoxVariants}>
                 <CertificationBox

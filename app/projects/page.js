@@ -103,6 +103,147 @@ export default function Projects() {
 
   const row1Projects = [
     {
+      title: "MindMap",
+      imageSrc: "./banners/mindmap.png",
+      imageAlt: "MindMap",
+      projectUrl: "https://github.com/wncelrcn/MindMap",
+      description:
+        "A Digital Journaling Web Application for Mental Wellness Support using Natural Language Processing and Generative AI.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl:
+        "https://www.canva.com/design/DAGtPG5Ku3g/pbFaw0qbf_BuTLlj0WwFQw/view?utm_content=DAGtPG5Ku3g&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha25ddf02d0",
+      websiteUrl: "https://mindmap-journals.vercel.app",
+      techStack: [
+        { name: "Next.js", color: "#4DB4D7" },
+        { name: "Material UI", color: "#4DB4D7" },
+        { name: "Supabase", color: "#4DB4D7" },
+        { name: "NVIDIA Nemotron Ultra", color: "#4DB4D7" },
+        { name: "Deep Learning", color: "#4DB4D7" },
+        { name: "Neural Networks", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/mindmap_1.png",
+        "./project-pictures/mindmap_2.png",
+        "./project-pictures/mindmap_3.png",
+        "./project-pictures/mindmap_4.png",
+        "./project-pictures/mindmap_5.png",
+        "./project-pictures/mindmap_6.png",
+        "./project-pictures/mindmap_7.png",
+        "./project-pictures/mindmap_8.png",
+        "./project-pictures/mindmap_9.png",
+        "./project-pictures/mindmap_10.png",
+        "./project-pictures/mindmap_11.png",
+        "./project-pictures/mindmap_12.png",
+        "./project-pictures/mindmap_13.png",
+        "./project-pictures/mindmap_14.png",
+      ],
+    },
+    {
+      title: "NeuroView",
+      imageSrc: "./banners/neuroview.png",
+      imageAlt: "NeuroView",
+      githubUrls: [
+        "https://github.com/wncelrcn/NeuroView",
+        "https://github.com/wncelrcn/NeuroView-Mobile",
+      ],
+      description:
+        "NeuroView is a comprehensive web and mobile application designed for medical professionals to analyze brain MRI scans using custom-built artificial intelligence. The platform provides accurate, fast, and user-friendly tumor detection with detailed visual insights to support clinical decision-making.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "https://neuroview-brainscans.vercel.app",
+      techStack: [
+        { name: "Next.js", color: "#4DB4D7" },
+        { name: "TailwindCSS", color: "#4DB4D7" },
+        { name: "Supabase", color: "#4DB4D7" },
+        { name: "Android", color: "#4DB4D7" },
+        { name: "Kotlin", color: "#4DB4D7" },
+        { name: "Deep Learning", color: "#4DB4D7" },
+        { name: "Neural Networks", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/neuroview_1.png",
+        "./project-pictures/neuroview_2.png",
+        "./project-pictures/neuroview_3.png",
+        "./project-pictures/neuroview_4.png",
+        "./project-pictures/neuroview_5.png",
+        "./project-pictures/neuroview_6.png",
+        "./project-pictures/neuroview_7.png",
+        "./project-pictures/neuroview_8.png",
+        "./project-pictures/neuroview_9.png",
+        "./project-pictures/neuroview_10.png",
+        "./project-pictures/neuroview_11.png",
+        "./project-pictures/neuroview_12.png",
+        "./project-pictures/neuroview_13.png",
+        "./project-pictures/neuroview_14.png",
+      ],
+    },
+    {
+      title: "Fashion MNIST Classification",
+      imageSrc: "./banners/fashion.png",
+      imageAlt: "Fashion MNIST Classification Project",
+      projectUrl: "https://github.com/wncelrcn/Fashion-MNIST-Classification",
+      description:
+        "A CS190-2P (Introduction to Machine Learning Theory) Final Lab Project. Made a comprehensive Fashion-MNIST classification using classical ML and deep learning (CNN, MLP), with preprocessing, augmentation, and model comparison.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "Machine Learning", color: "#4DB4D7" },
+        { name: "scikit-learn", color: "#4DB4D7" },
+        { name: "EDA", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/fashion_1.png",
+        "./project-pictures/fashion_2.png",
+        "./project-pictures/fashion_3.png",
+        "./project-pictures/fashion_4.png",
+        "./project-pictures/fashion_5.png",
+        "./project-pictures/fashion_6.png",
+        "./project-pictures/fashion_7.png",
+        "./project-pictures/fashion_8.png",
+        "./project-pictures/fashion_9.png",
+        "./project-pictures/fashion_10.png",
+        "./project-pictures/fashion_11.png",
+        "./project-pictures/fashion_12.png",
+      ],
+    },
+    {
+      title: "eloura",
+      imageSrc: "./banners/eloura.png",
+      imageAlt: "Fashion E-commerce UI/UX Project",
+      paperUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      figmaUrl:
+        "https://www.figma.com/proto/icSgEVxScFwbmQHCR2KHNv/eloura--Mobile-E-Commerce-App-?node-id=34-1513&t=ggCGLLQMCwnSA8zy-1",
+      description:
+        "A Fashion E-commerce UI/UX Project made using Figma. This project is a part of my Technical Assessment for the Codebility UI/UX Internship.",
+      techStack: [
+        { name: "Figma", color: "#4DB4D7" },
+        { name: "UI/UX", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/eloura_1.png",
+        "./project-pictures/eloura_2.png",
+        "./project-pictures/eloura_3.png",
+        "./project-pictures/eloura_4.png",
+        "./project-pictures/eloura_5.png",
+        "./project-pictures/eloura_6.png",
+        "./project-pictures/eloura_7.png",
+        "./project-pictures/eloura_8.png",
+        "./project-pictures/eloura_9.png",
+        "./project-pictures/eloura_10.png",
+        "./project-pictures/eloura_11.png",
+        "./project-pictures/eloura_12.png",
+        "./project-pictures/eloura_13.png",
+        "./project-pictures/eloura_14.png",
+        "./project-pictures/eloura_15.png",
+      ],
+    },
+    {
       title: "Colorectal Cancer Prediction",
       imageSrc: "./banners/colorectal.png",
       imageAlt: "Colorectal Cancer ML Project",
@@ -172,7 +313,7 @@ export default function Projects() {
         { name: "Next.js", color: "#4DB4D7" },
         { name: "Material UI", color: "#4DB4D7" },
         { name: "Firebase", color: "#4DB4D7" },
-        { name: "Groq AI", color: "#4DB4D7" },
+        { name: "Groq AI API", color: "#4DB4D7" },
       ],
       paperUrl: "#",
       figmaUrl: "#",
@@ -194,7 +335,7 @@ export default function Projects() {
       techStack: [
         { name: "Next.js", color: "#4DB4D7" },
         { name: "Firebase", color: "#4DB4D7" },
-        { name: "Groq AI", color: "#4DB4D7" },
+        { name: "Groq AI API", color: "#4DB4D7" },
       ],
       paperUrl: "#",
       figmaUrl: "#",
@@ -323,6 +464,116 @@ export default function Projects() {
 
   const row2Projects = [
     {
+      title: "MindMap Emotion Classifier",
+      imageSrc: "./banners/mindmap-ml.png",
+      imageAlt: "MindMap Emotion Classifier",
+      description:
+        "A fine-tuned multi-label emotion classification model based on microsoft/deberta-v3-base and microsoft/MiniLM-L12-H384-uncased and trained on the GoEmotions dataset. This model is designed to power emotional tagging for personal journaling and mental wellness applications like MindMap.",
+      projectUrl: "#",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      colabUrls: [
+        "https://colab.research.google.com/drive/1SARFNxLlkhkl7QZcmkodvR5nhCv97YNK?usp=sharing",
+        "https://colab.research.google.com/drive/1RipLfwWYsWEiCe-Vpxv58nFT6A6xKVbi?usp=sharing",
+      ],
+      huggingFaceUrls: [
+        "https://huggingface.co/wncelrcn/mindmap-deBERTa-goemotions-multilabel",
+        "https://huggingface.co/wncelrcn/mindmap-MiniLM-goemotions-v1",
+      ],
+      websiteUrl: "#",
+      techStack: [
+        { name: "Deep Learning", color: "#4DB4D7" },
+        { name: "NLP", color: "#4DB4D7" },
+        { name: "Sentiment Analysis", color: "#4DB4D7" },
+        { name: "PyTorch", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/nlp_1.png",
+        "./project-pictures/nlp_2.png",
+      ],
+    },
+    {
+      title: "Brain Tumor MRI Classification",
+      imageSrc: "./banners/neuroview-ml.png",
+      imageAlt: "NeuroView's Machine Learning Model",
+      projectUrl: "https://github.com/wncelrcn/Brain-Tumor-MRI-Classification",
+      description:
+        "A CS190-3P (Neural Networks & Deep Learning) Final Project, and the ML Model used in NeuroView. Brain Tumor MRI Classification using deep neural networks – achieving 93.5% accuracy across 4 classes (Glioma, Meningioma, Pituitary, No Tumor). Includes model experiments, analysis, and deployment-ready architecture.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      colabUrl:
+        "https://colab.research.google.com/drive/1fAmR5DdCRzRlyuF3Dhkk8w8l5_1VLj2s",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "Deep Learning", color: "#4DB4D7" },
+        { name: "Neural Networks", color: "#4DB4D7" },
+        { name: "EDA", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/brain_1.png",
+        "./project-pictures/brain_2.png",
+        "./project-pictures/brain_3.png",
+        "./project-pictures/brain_4.png",
+        "./project-pictures/brain_5.png",
+        "./project-pictures/brain_6.png",
+      ],
+    },
+    {
+      title: "California Housing Data",
+      imageSrc: "./banners/california.png",
+      imageAlt: "California Housing Data Regression Project",
+      projectUrl: "https://github.com/wncelrcn/California-Housing-Data",
+      description:
+        "A CS190-2P (Introduction to Machine Learning Theory) Final Lab Project. Made California housing price prediction using regression analysis. Includes EDA, preprocessing, feature engineering, and systematic comparison of linear, tree-based, and ensemble models (Random Forest, Gradient Boosting, XGBoost).",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "Machine Learning", color: "#4DB4D7" },
+        { name: "scikit-learn", color: "#4DB4D7" },
+        { name: "EDA", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/housing_1.png",
+        "./project-pictures/housing_2.png",
+        "./project-pictures/housing_3.png",
+        "./project-pictures/housing_4.png",
+        "./project-pictures/housing_5.png",
+        "./project-pictures/housing_6.png",
+        "./project-pictures/housing_7.png",
+      ],
+    },
+    {
+      title: "Predictive Modeling for Agriculture",
+      imageSrc: "./banners/agriculture.png",
+      imageAlt: "Predictive Modeling for Agriculture",
+      projectUrl:
+        "https://github.com/wncelrcn/Predictive-Modeling-for-Agriculture",
+      description:
+        "A DataCamp Machine Learning Project that predicts the best crop for a field using soil metrics through EDA, preprocessing, and classification models.",
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      techStack: [
+        { name: "Machine Learning", color: "#4DB4D7" },
+        { name: "scikit-learn", color: "#4DB4D7" },
+        { name: "EDA", color: "#4DB4D7" },
+      ],
+      additionalImages: [
+        "./project-pictures/agriculture_1.png",
+        "./project-pictures/agriculture_2.png",
+        "./project-pictures/agriculture_3.png",
+        "./project-pictures/agriculture_4.png",
+        "./project-pictures/agriculture_5.png",
+        "./project-pictures/agriculture_6.png",
+      ],
+    },
+
+    {
       title: "Breast Cancer Classification",
       imageSrc: "./banners/breast.png",
       imageAlt: "Breast Cancer ML Project",
@@ -371,6 +622,7 @@ export default function Projects() {
       techStack: [
         { name: "Next.js", color: "#4DB4D7" },
         { name: "Material UI", color: "#4DB4D7" },
+        { name: "OpenWeather", color: "#4DB4D7" },
       ],
       additionalImages: ["./project-pictures/skytrack_1.png"],
     },
@@ -542,8 +794,9 @@ export default function Projects() {
         <SectionTitle>PROJECTS</SectionTitle>
         <MainTitle>Projects I've Made</MainTitle>
         <SubTitle>
-          I did all sorts of projects – from building dynamic web apps to
-          exploring machine learning algorithms.
+          From intelligent AI applications to full-stack web solutions – I
+          transform ideas into powerful, user-focused technology that solves
+          real problems.
         </SubTitle>
       </MotionBox>
 

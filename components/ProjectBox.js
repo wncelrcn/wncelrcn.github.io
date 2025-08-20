@@ -102,6 +102,11 @@ export default function ProjectBox({
   websiteUrl = null,
   presentationUrl = null,
   figmaUrls = null,
+  huggingFaceUrl = null,
+  colabUrl = null,
+  githubUrls = null,
+  huggingFaceUrls = null,
+  colabUrls = null,
 }) {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -127,6 +132,11 @@ export default function ProjectBox({
     websiteUrl,
     presentationUrl,
     figmaUrls,
+    huggingFaceUrl,
+    colabUrl,
+    githubUrls,
+    huggingFaceUrls,
+    colabUrls,
   };
 
   return (

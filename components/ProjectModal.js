@@ -209,11 +209,16 @@ export default function ProjectModal({
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel nunc ac urna elementum malesuada. Praesent condimentum vel turpis mollis vulputate.",
     projectUrl: "#",
+    githubUrls: [],
     paperUrl: "#",
     figmaUrl: "#",
     figmaUrls: [],
     presentationUrl: "#",
     websiteUrl: "#",
+    huggingFaceUrl: "#",
+    huggingFaceUrls: [],
+    colabUrl: "#",
+    colabUrls: [],
     techStack: [
       { name: "ML", color: "#4DB4D7" },
       { name: "ML", color: "#4DB4D7" },
@@ -222,6 +227,15 @@ export default function ProjectModal({
     additionalImages: [],
   },
 }) {
+  const openInNewTab = (url) => {
+    if (!url) return;
+    let finalUrl = url;
+    if (finalUrl === "#") return;
+    if (!/^https?:\/\//i.test(finalUrl)) {
+      finalUrl = "https://" + finalUrl;
+    }
+    window.open(finalUrl, "_blank");
+  };
   const handleGitHubClick = () => {
     if (project.projectUrl !== "#") {
       window.open(project.projectUrl, "_blank");
@@ -421,12 +435,52 @@ export default function ProjectModal({
           {project.websiteUrl && project.websiteUrl !== "#" && (
             <WebsiteLink onClick={handleWebsiteClick}>View Website</WebsiteLink>
           )}
+          {Array.isArray(project.githubUrls) && project.githubUrls.length > 0
+            ? project.githubUrls.map((url, index) => (
+                <GitHubLink key={index} onClick={() => openInNewTab(url)}>
+                  {project.githubUrls.length > 1
+                    ? `View GitHub #${index + 1}`
+                    : "View Project on GitHub"}
+                </GitHubLink>
+              ))
+            : project.projectUrl !== "#" && (
+                <GitHubLink onClick={handleGitHubClick}>
+                  View Project on GitHub
+                </GitHubLink>
+              )}
 
-          {project.projectUrl !== "#" && (
-            <GitHubLink onClick={handleGitHubClick}>
-              View Project on GitHub
-            </GitHubLink>
-          )}
+          {Array.isArray(project.huggingFaceUrls) &&
+          project.huggingFaceUrls.length > 0
+            ? project.huggingFaceUrls.map((url, index) => (
+                <GitHubLink key={index} onClick={() => openInNewTab(url)}>
+                  {project.huggingFaceUrls.length > 1
+                    ? `View on Hugging Face #${index + 1}`
+                    : "View on Hugging Face"}
+                </GitHubLink>
+              ))
+            : project.huggingFaceUrl &&
+              project.huggingFaceUrl !== "#" && (
+                <GitHubLink
+                  onClick={() => openInNewTab(project.huggingFaceUrl)}
+                >
+                  View on Hugging Face
+                </GitHubLink>
+              )}
+
+          {Array.isArray(project.colabUrls) && project.colabUrls.length > 0
+            ? project.colabUrls.map((url, index) => (
+                <GitHubLink key={index} onClick={() => openInNewTab(url)}>
+                  {project.colabUrls.length > 1
+                    ? `Open in Google Colab #${index + 1}`
+                    : "Open in Google Colab"}
+                </GitHubLink>
+              ))
+            : project.colabUrl &&
+              project.colabUrl !== "#" && (
+                <GitHubLink onClick={() => openInNewTab(project.colabUrl)}>
+                  Open in Google Colab
+                </GitHubLink>
+              )}
         </ContentSection>
       </ModalContainer>
     </Modal>

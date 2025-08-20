@@ -130,8 +130,10 @@ export default function Skills() {
         <SectionTitle>SKILLS AND EXPERTISE</SectionTitle>
         <MainTitle>How I Add Value</MainTitle>
         <SubTitle>
-          Backed by a strong foundation in Computer Science, I bring a versatile
-          skill set to every project.
+          As a Computer Science student specializing in Machine Learning with
+          hands-on experience across AI, full-stack development, and cloud
+          technologies, I deliver comprehensive solutions from concept to
+          deployment.
         </SubTitle>
       </MotionBox>
 
@@ -139,84 +141,127 @@ export default function Skills() {
       <MotionGrid container>
         <Grid item xs={12}>
           <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
-            <SkillCategory>Machine Learning</SkillCategory>
+            <SkillCategory>
+              Artificial Intelligence & Machine Learning
+            </SkillCategory>
             <Box sx={{ ml: 1 }}>
               <BulletList>
                 <MotionListItem variants={listItemVariants}>
-                  Experienced in implementing supervised and unsupervised
-                  learning algorithms for classification and clustering.
+                  Built custom neural networks (MLP, CNN) achieving 93.5%
+                  accuracy in brain tumor classification using
+                  PyTorch/TensorFlow
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Developed a face recognition model, using the face_recognition
-                  library and OpenCV, which uses pre- trained models for face
-                  detection and encoding.
+                  Developed computer vision systems: YOLO v11 object detection,
+                  face recognition (OpenCV), medical image analysis pipelines
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Developed multiple object detection models using YOLO v11.
+                  Fine-tuned transformer models (DeBERTa, MiniLM) for NLP tasks,
+                  deployed on Hugging Face, integrated LLM APIs (Groq, NVIDIA)
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Trained a natural language processing (NLP) model for text
-                  analysis and sentiment classification.
+                  Expert in supervised learning: SVM, Random Forest, XGBoost,
+                  Logistic Regression with hyperparameter optimization
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Applied unsupervised methods: K-Means clustering, PCA/t-SNE
+                  dimensionality reduction, pattern discovery techniques
+                </MotionListItem>
+              </BulletList>
+            </Box>
+          </MotionBox>
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Data Science & Analytics</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Proficient in Python data science stack: pandas, numpy,
+                  matplotlib, seaborn for EDA and statistical analysis
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Experienced in data preprocessing, feature engineering, and ML
+                  pipeline development across multiple domains
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Applied statistical methods: regression analysis, hypothesis
+                  testing, A/B testing, and model evaluation metrics
                 </MotionListItem>
               </BulletList>
             </Box>
           </MotionBox>
 
           <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
-            <SkillCategory>Front-end Development</SkillCategory>
+            <SkillCategory>UI/UX Design</SkillCategory>
             <Box sx={{ ml: 1 }}>
               <BulletList>
                 <MotionListItem variants={listItemVariants}>
-                  Developed multiple web and mobile projects using front-end
-                  frameworks including React, React Native, Next.js, Vue.js, and
-                  ASP.NET.
+                  UI/UX Designer Intern creating wireframes, high-fidelity
+                  mockups, and interactive Figma prototypes with design systems
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Skilled in designing user-friendly interfaces for web and
-                  mobile applications using Figma.
+                  Conducted usability testing and iterative design improvements
+                  to enhance user task completion and visual consistency
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Proficient in using different styling frameworks such as
-                  TailwindCSS, Material UI, DaisyUI, and Bootstrap.
-                </MotionListItem>
-                <MotionListItem variants={listItemVariants}>
-                  Created dashboards and data visualizations using ChartJs.
+                  Designed user interfaces for e-commerce, shuttle booking, and
+                  business management applications
                 </MotionListItem>
               </BulletList>
             </Box>
           </MotionBox>
 
           <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
-            <SkillCategory>Back-end Development</SkillCategory>
+            <SkillCategory>Full-Stack Web Development</SkillCategory>
             <Box sx={{ ml: 1 }}>
               <BulletList>
                 <MotionListItem variants={listItemVariants}>
-                  Created RESTful APIs using Express.js and Flask.
+                  Expert in React, Next.js, ASP.NET WebForms; proficient in
+                  TailwindCSS, Material UI, Bootstrap for responsive design
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Has experience in using and integrating difference Database
-                  Management Systems like MS SQL, MySQL, Firebase, Supabase, and
-                  MongoDB.
+                  Built RESTful APIs (Express.js, Flask), integrated databases
+                  (Supabase, Firebase, MySQL, MongoDB), Node.js/PHP backends
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Knowledgeable in software design and architecture of software
-                  projects.
+                  Developed interactive data dashboards with Chart.js for
+                  competition projects and business applications
                 </MotionListItem>
               </BulletList>
             </Box>
           </MotionBox>
 
           <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
-            <SkillCategory>Project Management</SkillCategory>
+            <SkillCategory>Mobile Development</SkillCategory>
             <Box sx={{ ml: 1 }}>
               <BulletList>
                 <MotionListItem variants={listItemVariants}>
-                  Spearheaded different teams through the planning, analysis,
-                  design, and implementation of various software projects.
+                  Built cross-platform apps (React Native) and native apps
+                  (Kotlin Android, Swift/SwiftUI iOS, Xamarin C#)
                 </MotionListItem>
                 <MotionListItem variants={listItemVariants}>
-                  Used project management tools such as Trello, Jira, and GitHub
-                  for managing project deliverables
+                  Implemented mobile features: camera integration, real-time
+                  data, offline capabilities, responsive UI design
+                </MotionListItem>
+              </BulletList>
+            </Box>
+          </MotionBox>
+
+          <MotionBox sx={{ mb: 5 }} variants={skillCategoryVariants}>
+            <SkillCategory>Project Management & Leadership</SkillCategory>
+            <Box sx={{ ml: 1 }}>
+              <BulletList>
+                <MotionListItem variants={listItemVariants}>
+                  Led software development teams through complete project
+                  lifecycles using Trello, Jira, and GitHub workflows
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Competed in programming competitions and hackathons (DLSU
+                  Hackercup, CodeChum National Challenge) managing tight
+                  deadlines
+                </MotionListItem>
+                <MotionListItem variants={listItemVariants}>
+                  Conducted programming workshops and mentored CS students
+                  through Mapúa MCL-ACM Student Chapter
                 </MotionListItem>
               </BulletList>
             </Box>

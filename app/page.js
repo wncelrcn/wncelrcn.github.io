@@ -576,7 +576,7 @@ export default function Home() {
                 fontSize: "1.2rem",
               }}
             >
-              I am currently a Third Year BS in Computer Science Student at
+              I am currently a Fourth Year BS in Computer Science Student at
               Mapua Malayan Colleges Laguna.
             </Typography>
             <Typography
