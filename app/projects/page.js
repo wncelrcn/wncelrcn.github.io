@@ -326,6 +326,32 @@ export default function Projects() {
       ],
     },
     {
+      title: "EcoTrack",
+      imageSrc: "./banners/ecotrack.png",
+      imageAlt: "EcoTrack",
+      projectUrl: "https://github.com/wncelrcn/EcoTrack",
+      description:
+        "EcoTrack is a mobile application designed to help users track their carbon footprint and reduce their environmental impact. Made using React Native, Expo, and Firebase.",
+      techStack: [
+        { name: "React Native", color: "#4DB4D7" },
+        { name: "Android", color: "#4DB4D7" },
+        { name: "Expo", color: "#4DB4D7" },
+        { name: "Firebase", color: "#4DB4D7" },
+      ],
+      paperUrl: "#",
+      figmaUrl: "#",
+      presentationUrl: "#",
+      websiteUrl: "#",
+      additionalImages: [
+        "./project-pictures/ecotrack_1.png",
+        "./project-pictures/ecotrack_2.png",
+        "./project-pictures/ecotrack_3.png",
+        "./project-pictures/ecotrack_4.png",
+        "./project-pictures/ecotrack_5.png",
+        "./project-pictures/ecotrack_6.png",
+      ],
+    },
+    {
       title: "EduBot",
       imageSrc: "./banners/eduot.png",
       imageAlt: "EduBot",
